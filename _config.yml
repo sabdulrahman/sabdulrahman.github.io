@@ -1,0 +1,54 @@
+title: Hello, my name is Abdul Rahman Shaikh
+description: Abdul Homepage
+baseurl: ""
+url: https://sabdulrahman.github.io/
+
+theme: cvless
+
+# site settings
+taglong: <p>Welcome to my personal website. I'm a passionate technologist with a keen interest in solving complex problems
+  through innovative solutions. With experience spanning multiple domains, I focus on creating meaningful impact
+  through technology and collaboration.</p>
+  
+  <p>Through this space, I share my thoughts, projects, and experiences in software development, machine learning,
+  and emerging technologies. Feel free to explore my work and get in touch if you'd like to collaborate or discuss
+  interesting ideas.</p>
+tagshort: Homepage
+
+# author settings
+author:
+  name: Abdul Rahman Shaikh
+  email: iamsabdurahman@gmail.com
+photo: assets/files/photo.jpeg
+address:
+phone: +1 224 848 8888
+
+# social media links
+social:
+  facebook: username
+  github: sabdulrahman
+  instagram: username
+  linkedin: username
+  stackoverflow: 0000000/username
+  x: username
+
+# build settings
+permalink: pretty
+exclude:
+  - docker-compose.yml
+  - LICENSE
+  - README.md
+
+
+navs:
+  - href: /resume
+    label: Resume
+
+  - href: '#research'
+    label: Research
+
+  - href: '#project'
+    label: Projects
+
+  - href: '#contact'
+    label: Contact
