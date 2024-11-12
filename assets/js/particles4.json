@@ -1,0 +1,46 @@
+{
+  "particles": {
+    "number": {
+      "value": 100
+    },
+    "color": {
+      "value": [
+        "#FF1461",
+        "#18FF92",
+        "#5A87FF",
+        "#FBF38C"
+      ]
+    },
+    "shape": {
+      "type": [
+        "circle",
+        "triangle",
+        "edge"
+      ]
+    },
+    "opacity": {
+      "value": 1
+    },
+    "size": {
+      "value": 5,
+      "random": true
+    },
+    "move": {
+      "direction": "top",
+      "speed": 6
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      }
+    },
+    "modes": {
+      "push": {
+        "particles_nb": 4
+      }
+    }
+  }
+}
