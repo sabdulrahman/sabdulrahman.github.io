@@ -3,8 +3,6 @@ description: Abdul Homepage
 baseurl: ""
 url: https://sabdulrahman.github.io/
 
-theme: cvless
-
 # site settings
 taglong: <p>Welcome to my personal website. I'm a passionate technologist with a keen interest in solving complex problems
   through innovative solutions. With experience spanning multiple domains, I focus on creating meaningful impact
