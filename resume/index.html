@@ -5,24 +5,41 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="description" content="Abdul Rahman Shaikh - Researhcer and PhD candidate at Northern Illinois University | Portfolio, Projects, and Contact Information.">
+    <meta name="keywords" content="Abdul Rahman Shaikh, Researcher, PhD Candidate, Northern Illinois University, 
+    Artificial Intelligence, Machine Learning, Large Language Models, Python, YouTube, Societal Impact, Altmetric, Visual Analytics ">
+    <meta name="author" content="Abdul Rahman Shaikh">
     <title>Abdul's Resume</title>
     <meta name="description"
           content="Abdul Homepage">
 
-    <link rel="stylesheet" href="https://sabdulrahman.github.io//assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://sabdulrahman.github.io//assets/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://sabdulrahman.github.io//assets/css/open-color.min.css">
     <link rel="stylesheet" href="https://sabdulrahman.github.io//assets/css/common.css">
     <link rel="stylesheet" href="https://sabdulrahman.github.io//assets/css/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/font/octicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/font/octicons.min.css"> -->
     <link rel="apple-touch-icon" sizes="512x512" href="https://sabdulrahman.github.io//assets/icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="https://sabdulrahman.github.io//assets/icon.png">
     <link rel="icon" type="image/png" sizes="512x512" href="https://sabdulrahman.github.io//assets/icon.png">
     <link rel="manifest" href="https://sabdulrahman.github.io//assets/site.webmanifest">
     <link rel="alternate" type="application/atom+xml" title="Hello, World! I’m Abdul - AI Enthusiast & Code Whisperer"
           href="https://sabdulrahman.github.io//atom.xml">
-
 </head>
+
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdul Rahman Shaikh",
+        "jobTitle": "Researcher, PhD candidate at Northern Illinois University",
+        "url": "https://sabdulrahman.github.io/",
+        "sameAs": [
+          "https://www.linkedin.com/in/iamsabdurahman/",
+          "https://github.com/sabdulrahman"
+        ]
+      }
+</script>
+      
 
 
 
@@ -223,7 +240,7 @@ canvas {
 .toggle-version-button {
     position: fixed;
     top: 80px;
-    left: 20px;
+    left: 50px;
     background-color: #4183c4;
     color: white;
     border: none;
@@ -247,8 +264,8 @@ canvas {
 @media screen and (max-width: 768px) {
     .download-button {
         /* Adjust position for mobile */
-        top: 60px;
-        right: 5px;
+        top: 12px;
+        right: 12px;
         /* Make button slightly smaller on mobile */
         width: 36px;
         height: 36px;
@@ -280,8 +297,8 @@ canvas {
     }
 
     .toggle-version-button {
-        top: 60px;
-        left: 15px;
+        top: 18px;
+        left: 12px;
         font-size: 12px;
         padding: 6px 12px;
     }
@@ -302,7 +319,7 @@ canvas {
     }
 
     .toggle-version-button {
-        top: 55px;
+        top: 10px;
         left: 10px;
         font-size: 11px;
         padding: 5px 10px;
@@ -370,7 +387,7 @@ canvas {
     </div>
 </header>
 
-<p><button class="toggle-version-button" onclick="toggleVersion()">1-Page CV</button></p>
+<p><button class="toggle-version-button" onclick="toggleVersion()">My CV</button></p>
 
 <p><button class="download-button" onclick="downloadPDF()" title="Download Resume">
     <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -385,10 +402,10 @@ canvas {
 <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    let currentVersion = 'full';
-    const fullVersionUrl = '/assets/files/Resume.pdf';
-    const onePageUrl = '/assets/files/CV.pdf';
-    let currentUrl = fullVersionUrl;
+    let currentVersion = 'onePage';
+    const fullVersionUrl = '/assets/files/CV.pdf';
+    const onePageUrl = '/assets/files/Resume.pdf';
+    let currentUrl = onePageUrl;
     const scale = 6;
 
     function toggleVersion() {
@@ -401,11 +418,11 @@ canvas {
         if (currentVersion === 'full') {
             currentVersion = 'onePage';
             currentUrl = onePageUrl;
-            button.textContent = 'Full Resume';
+            button.textContent = 'My CV';
         } else {
             currentVersion = 'full';
             currentUrl = fullVersionUrl;
-            button.textContent = '1-Page CV';
+            button.textContent = 'Resume';
         }
         
         // Load new PDF
@@ -415,7 +432,7 @@ canvas {
    function downloadPDF() {
         const link = document.createElement('a');
         link.href = currentUrl;
-        link.download = currentVersion === 'full' ? 'Resume.pdf' : 'CV.pdf';
+        link.download = currentVersion === 'full' ? 'CV.pdf' : 'Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
