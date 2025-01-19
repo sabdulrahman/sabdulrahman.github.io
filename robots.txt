@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sabdulrahman.github.io/mysitemap.xml
+Sitemap: https://sabdulrahman.github.io/sitemap.xml
