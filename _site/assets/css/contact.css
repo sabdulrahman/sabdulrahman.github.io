@@ -3,7 +3,6 @@
 
 #contact {
     padding: 2rem 2rem;
-    background: #171717;
     min-height: 100vh;
 }
 
@@ -13,6 +12,21 @@
     padding: 0rem 1rem;
 }
 
+html[data-theme="light"] {
+    .contact-form-container {
+        background: var(--form-bg-dark, #ffffff);
+    }
+
+    .contact-card {
+        background: var(--form-bg-dark, #ffffff);
+    }
+
+    .submit-btn{
+        color: rgb(65, 131, 196);
+        background: #ebebeb;
+    }
+
+}
 
 .contacts-content {
     display: grid;
@@ -76,16 +90,14 @@
 
 .contact-link:hover {
     color: #4183C4FF;
-    text-shadow: 0 0 2px rgb(0, 0, 0);
 }
 
 
 /* Contact Form */
 .contact-form-container {
-    background: var(--form-bg, #4183c4);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgb(65, 131, 196);
 }
 
 .contact-form {
