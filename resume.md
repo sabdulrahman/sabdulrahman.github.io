@@ -52,6 +52,131 @@ body {
     fill: black;
 }
 
+.site-title-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.site-logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    max-height: 50px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+#site-title {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    color: #FFF;
+    text-decoration: none;
+    margin: 0;
+    font-weight: 500;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .contain {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        position: relative;
+    }
+
+    .site-title-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .site-logo-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .site-logo {
+        height: 35px;
+        width: auto;
+        margin: 0;
+    }
+
+    #site-title {
+        font-size: 16px;
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .site-header-nav {
+        display: none;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .site-logo {
+        height: 30px;
+    }
+
+    #site-title {
+        font-size: 14px;
+    }
+}
+
+
+/* Header Container */
+.site-header {
+    position: fixed;
+    width: 100%;
+    left: 0 !important;
+    top:0;
+    z-index: 103;
+    background: black;
+    transition: all 0.5s ease;
+}
+
+/* Site Title Styles */
+#site-title {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+#site-title:hover {
+    opacity: 0.8; /* Slight fade effect on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    color: #4183c4; /* Blue color on hover */
+
+}
+
+.contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.site-logo {
+    max-height: 50px; /* Adjust height as needed */
+    margin-top: 3px;
+}
 
 .toggle-version-button {
     position: fixed;
@@ -152,25 +277,10 @@ canvas {
     height: auto;
 }
 
-#site-title {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    transition: text-shadow 0.3s ease, color 0.3s ease;
-}
 
-/* Interactive States with glow effect */
-#site-title:hover,
-#site-title:focus {
-    color: var(--color-link-hover, #4183c4);
-    text-shadow: 0 0 8px rgba(65, 131, 196, 0.6),  /* Main color glow */
-                 0 0 12px rgba(65, 131, 196, 0.4);  /* Outer glow */
-}
-/* Ensure Research is always highlighted */
 .site-header-nav-item.selected {
     color: var(--color-link-hover, #4183c4);
 }
-
 .site-header-nav-item.selected::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -195,9 +305,17 @@ canvas {
 <header class="site-header">
     <div class="contain">
         <button class="menu-toggle">☰</button>
+         <div class="site-title-logo">
+            <div class="site-logo-section">
+                <a href="/#home" title="Home">
+                    <img src="/assets/icon_bg.png" alt="Logo" class="site-logo">
+                </a>
+            </div>
+
         <a id="site-title" href="/#home" title="{{ site.name }}">
             Abdul Rahman Shaikh
         </a>
+        </div>
         <nav class="site-header-nav" role="navigation">
             {% for nav in site.navs %}
             <a href="{{ nav.href }}"

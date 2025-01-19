@@ -1,16 +1,12 @@
-title: Hello, my name is Abdul Rahman Shaikh
+title: Hello, World! I’m Abdul - AI Enthusiast, Code Whisperer
 description: Abdul Homepage
 baseurl: ""
 url: https://sabdulrahman.github.io/
 
 # site settings
-taglong: <p>Welcome to my personal website. I'm a passionate technologist with a keen interest in solving complex problems
-  through innovative solutions. With experience spanning multiple domains, I focus on creating meaningful impact
-  through technology and collaboration.</p>
-  
-  <p>Through this space, I share my thoughts, projects, and experiences in software development, machine learning,
-  and emerging technologies. Feel free to explore my work and get in touch if you'd like to collaborate or discuss
-  interesting ideas.</p>
+taglong: <p>I’m a passionate technologist and final-year Computer Science PhD candidate specializing in leveraging AI, large language models, and cutting-edge technologies to solve complex challenges. From crafting AI that might take over the world (just kidding!) to building scalable software, I’m dedicated to creating meaningful impact through tech and collaboration.</p>
+  <p>Here, you’ll find my projects, insights, and contributions to the tech community. 
+  Whether you’re looking for collaboration, inspiration, or just want to discuss groundbreaking ideas, let’s connect and explore the possibilities together!</p>
 tagshort: Homepage
 
 # author settings

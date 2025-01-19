@@ -209,7 +209,6 @@ h1.page-title{
 h3{
     margin-top:1em;
     font-size:1em;
-    text-transform:lowercase;
     font-family:var(--type-caps);
     font-weight:500
 }
@@ -258,24 +257,46 @@ h3{
     }
 }
 
+
 .contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    margin: 0 auto;
 }
 
-/* Global Link Reset */
-a:link {
-    text-decoration: none;
-}
 
 /** Header **/
+
+.site-logo {
+    max-height: 50px; /* Adjust height as needed */
+    margin-top: 3px;
+}
+
+a .site-logo {
+    cursor: pointer;
+}
+
+a:hover .site-logo {
+    opacity: 0.8; /* Slight fade effect on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: all 0.3s ease; /* Smooth transition */
+    color: #4183c4; /* Blue color on hover */
+
+}
+
+.site-title-logo{
+    margin-left: 100px;
+    display:flex;
+}
+
 /* Header Container */
 .site-header {
     position: fixed;
-    display: flex;
     width: 100%;
-    padding: 10px;
-    margin: 5px auto;
     left: 0 !important;
+    top:0;
     z-index: 103;
     background: black;
     transition: all 0.5s ease;
@@ -284,10 +305,17 @@ a:link {
 /* Site Title Styles */
 #site-title {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
-    margin-left: min(3vw, 50px);
     color: #FFF;
     text-decoration: none;
+    margin-left: 10px;
     font-weight: 500;
+}
+
+#site-title:hover {
+    opacity: 0.8; /* Slight fade effect on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    color: #4183c4; /* Blue color on hover */
+
 }
 
 /* Navigation Container */
@@ -305,8 +333,6 @@ a:link {
     padding: clamp(0.5rem, 1vw, 0.625rem);
     text-decoration: none;
     position: relative;
-
-    /* Transitions */
     transition: color 0.3s ease;
 }
 
@@ -400,18 +426,25 @@ a:link {
 }
 
 
-/* Media Query for Mobile View */
 @media (max-width: 768px) {
+    .contain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 0 0 0 0;  /* 30px right padding */
+        height: 60px;
+    }
 
-    .site-header{
-        text-align: center;
+    #site-title {
+        font-size: 18px;  /* Slightly reduced for mobile */
     }
-    #site-title{
-        font-size: 20px;
-        flex: 1;
-    }
+
     .menu-toggle {
-        display: block; /* Show the burger menu button on mobile */
+        display: block;
+        position: absolute;
+        left: 1rem;
+        z-index: 2;
     }
 
     .site-header-nav {
@@ -431,11 +464,61 @@ a:link {
     }
 
     .site-header-nav-item {
-        padding: 1vh 5vw;
-        font-size: clamp(1rem, 4vw, 1.25rem);
+        font-size: clamp(0.875rem, 3vw, 1.125rem);
+        padding: 0.75rem 0;
     }
-    .contain{
+
+    .site-logo-section {
+        margin: 0;
+    }
+
+    .site-logo {
+        height: auto;
+        width: 35px;  /* Slightly reduced logo size */
+    }
+
+    .site-title-logo {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        gap: 8px;  /* Space between logo and title */
+        transform: translateX(-15px);  /* Offset to account for menu toggle */
+    }
+    /* Hover effects */
+    #site-title:hover {
+        opacity: 0.8;
+        color: #4183c4;
+    }
+
+    .site-logo:hover {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    .site-logo-section:hover + #site-title {
+        opacity: 0.8;
+        color: #4183c4;
+    }
+
+    #site-title:hover + .site-logo-section img {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    .site-header-nav {
+        display: none;
+    }    
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+    #site-title {
+        font-size: 16px;
+    }
+
+    .site-logo {
+        width: 30px;
     }
 }
 
@@ -537,14 +620,38 @@ a:link {
     stroke-width: 0.075em;
 }
 
+#hero-section{
+    padding: 4rem 2rem;
+    min-height: 100vh;
+}
+
 @media (max-width: 768px) {
     /* Adjust max-width as needed for your breakpoints */
     /* Profile Container */
-    .profile-container {
+    #particles-js {
+        position: absolute;  /* Changed from fixed to absolute */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+    }
+
+    #particles-js .particles-js-canvas-el {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+  .profile-container {
         width: 80vw;
         padding: 1.5rem;
         left: 50%;
         transform: translateX(-50%);
+        position: relative;
+        z-index: 3;  /* Higher z-index than particles */
+        pointer-events: auto;  /* Ensure clickable */
     }
 
     .profile-photo {
@@ -567,47 +674,14 @@ a:link {
     .profile-icon svg {
         transform: scale(var(--icon-scale-mobile));
     }
-}
 
-
-.interests{
-    margin: 0 auto;
-    text-align:center;
-    font-size: clamp(1rem, 2rem, 3.125rem);  /* 50px equivalent with responsive scaling */
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-evenly;
-    width: min(60vw, 56.25rem);  /* 900px equivalent with max-width */
-
-}
-.expert {
-    flex: 1 1 auto;
-    min-width: 200px;  /* Prevent items from becoming too narrow */
-    max-width: 300px;  /* Prevent items from becoming too wide */
-}
-
-.expert svg {
-    width: clamp(2.5rem, 7vw, 4.375rem);  /* 70px equivalent with responsive scaling */
-    height: auto;  /* Maintain aspect ratio */
-    stroke-width: 0;
-}
-
-.expert p {
-    font-size: clamp(0.5rem, 1rem, 1.5rem);
-    color: white;
-}
-
-
-
-@media (max-width: 768px) {
     .profile-right {
-        position: relative;    /* Change to relative positioning */
-        top: -55vw;
-        left: auto;
-        width: 95vw;          /* Use most of the viewport width */
-        margin: 2rem auto;    /* Center the container */
-        padding: 1rem;
+        width: 80vw;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        z-index: 3;  /* Higher z-index than particles */
+        pointer-events: auto;  /* Ensure clickable */
     }
 
     .profile-title {
@@ -622,11 +696,11 @@ a:link {
     }
 
     .interests {
+        margin: 4rem 0.6rem auto;
         font-size: clamp(1.2rem, 4vw, 1.8rem);
         flex-direction: column;
         width: 100%;
-        margin: 1rem auto;
-        gap: 0.5rem;
+        gap: 0.9rem;
     }
 
     .expert svg {
@@ -636,6 +710,35 @@ a:link {
     .expert p {
         font-size: clamp(0.8rem, 3vw, 1rem);
     }
+}
+
+
+.interests{
+    margin-top: 3rem;
+    text-align:center;
+    font-size: clamp(1rem, 2rem, 3rem);  /* 50px equivalent with responsive scaling */
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    width: min(60vw, 56.25rem);  /* 900px equivalent with max-width */
+
+}
+.expert {
+    flex: 1 1 auto;
+    min-width: 200px;  /* Prevent items from becoming too narrow */
+    max-width: 300px;  /* Prevent items from becoming too wide */
+}
+
+.expert svg {
+    width: clamp(4rem, 7vw, 4.375rem);  /* 70px equivalent with responsive scaling */
+    height: auto;  /* Maintain aspect ratio */
+    stroke-width: 0;
+}
+
+.expert p {
+    font-size: clamp(0.5rem, 1rem, 1.5rem);
+    color: white;
 }
 
 /* Research Section */
@@ -679,10 +782,6 @@ a:link {
 }
 
 
-a img:hover {
-    cursor: zoom-in;
-}
-
 /* First, create the cursor using the SVG */
 .zoom-cursor {
     cursor: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSI4IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz48bGluZSB4MT0iMTgiIHkxPSIxOCIgeDI9IjI3IiB5Mj0iMjciIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPjxsaW5lIHgxPSIxMiIgeTE9IjgiIHgyPSIxMiIgeTI9IjE2IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz48bGluZSB4MT0iOCIgeTE9IjEyIiB4Mj0iMTYiIHkyPSIxMiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+') 12 12, zoom-in;
@@ -699,7 +798,7 @@ a.image-link:hover {
 }
 
 /* If you want to apply it to all images within links */
-a img:hover {
+ .pub-container img:hover {
     cursor: zoom-in; /* Fallback for browsers that don't support custom cursors */
     cursor: var(--zoom-cursor, zoom-in);
 }

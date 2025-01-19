@@ -55,5 +55,5 @@ Feel free to customize this website to fit your personal brand. You can modify t
 
 Let's connect! You can reach me through:
 
-- ✉️ **Email**: [sabdulrahman095@gmail.com](mailto:sabdulrahman095@gmail.com)
+- ✉️ **Email**: [iamsabdurahman@gmail.com](mailto:iamsabdurahman@gmail.com)
 - 💼 **LinkedIn**: [Abdul Rahman Shaikh](https://www.linkedin.com/in/abdul-rahman-shaikh-234631148/)
