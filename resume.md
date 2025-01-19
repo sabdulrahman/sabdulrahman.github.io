@@ -192,7 +192,7 @@ canvas {
 .toggle-version-button {
     position: fixed;
     top: 80px;
-    left: 20px;
+    left: 50px;
     background-color: #4183c4;
     color: white;
     border: none;
@@ -216,8 +216,8 @@ canvas {
 @media screen and (max-width: 768px) {
     .download-button {
         /* Adjust position for mobile */
-        top: 60px;
-        right: 5px;
+        top: 12px;
+        right: 12px;
         /* Make button slightly smaller on mobile */
         width: 36px;
         height: 36px;
@@ -249,8 +249,8 @@ canvas {
     }
 
     .toggle-version-button {
-        top: 60px;
-        left: 15px;
+        top: 18px;
+        left: 12px;
         font-size: 12px;
         padding: 6px 12px;
     }
@@ -271,7 +271,7 @@ canvas {
     }
 
     .toggle-version-button {
-        top: 55px;
+        top: 10px;
         left: 10px;
         font-size: 11px;
         padding: 5px 10px;
@@ -330,7 +330,7 @@ canvas {
     </div>
 </header>
 
-<button class="toggle-version-button" onclick="toggleVersion()">1-Page CV</button>
+<button class="toggle-version-button" onclick="toggleVersion()">My CV</button>
 
 
 <button class="download-button" onclick="downloadPDF()" title="Download Resume">
@@ -345,10 +345,10 @@ canvas {
 <script>
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    let currentVersion = 'full';
-    const fullVersionUrl = '/assets/files/Resume.pdf';
-    const onePageUrl = '/assets/files/CV.pdf';
-    let currentUrl = fullVersionUrl;
+    let currentVersion = 'onePage';
+    const fullVersionUrl = '/assets/files/CV.pdf';
+    const onePageUrl = '/assets/files/Resume.pdf';
+    let currentUrl = onePageUrl;
     const scale = 6;
 
     function toggleVersion() {
@@ -361,11 +361,11 @@ canvas {
         if (currentVersion === 'full') {
             currentVersion = 'onePage';
             currentUrl = onePageUrl;
-            button.textContent = 'Full Resume';
+            button.textContent = 'My CV';
         } else {
             currentVersion = 'full';
             currentUrl = fullVersionUrl;
-            button.textContent = '1-Page CV';
+            button.textContent = 'Resume';
         }
         
         // Load new PDF
@@ -375,7 +375,7 @@ canvas {
    function downloadPDF() {
         const link = document.createElement('a');
         link.href = currentUrl;
-        link.download = currentVersion === 'full' ? 'Resume.pdf' : 'CV.pdf';
+        link.download = currentVersion === 'full' ? 'CV.pdf' : 'Resume.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
