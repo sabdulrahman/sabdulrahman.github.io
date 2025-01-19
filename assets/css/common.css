@@ -1,3 +1,4 @@
+
 @font-face{
     font-family:"Piazzolla";
     src:url("../fonts/Piazzolla-Light.woff2") format("woff2");
@@ -139,7 +140,9 @@
     text-rendering:optimizeLegibility
 }
 
-:root{
+/* Base Theme Variables */
+:root {
+    /* Typography */
     --type-serif: "Piazzolla", serif;
     --type-caps: "Piazzolla SC", serif;
     --type-mono: "Hack", monospace;
@@ -147,10 +150,42 @@
     --type-weight: 400;
     --type-height: 1.4;
     --type-numeric: oldstyle-nums proportional-nums;
-    --color-particles-text: var(--oc-gray-1);
-    --color-particles-background: var(--oc-gray-9)
+    
+    /* Sizing */
+    --photo-size-desktop: min(350px, 30vw);
+    --photo-size-mobile: min(250px, 70vw);
+    --icon-scale: 2.0;
+    --icon-scale-mobile: 1.7;
 }
-html,html[data-theme=light]{
+
+/* Dark Theme (Default) */
+:root, html[data-theme="dark"] {
+    /* Colors */
+    --color-background: var(--oc-gray-9);
+    --color-text: var(--oc-gray-3);
+    --color-heading: var(--oc-gray-3);
+    --color-link: var(--oc-blue-3);
+    --color-chunk: var(--oc-gray-8);
+    --color-mark: var(--oc-gray-8);
+    --color-border: var(--oc-gray-7);
+    --color-button: var(--oc-gray-7);
+    
+    /* Particles Theme */
+    --color-particles-text: var(--oc-gray-1);
+    --color-particles-background: var(--oc-gray-9);
+    
+    /* Card & Project Colors */
+    --card-bg: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --tool-bg: #2a2a2a;
+    --tool-text: #d0d0d0;
+    --tool-bg-hover: #3a3a3a;
+}
+
+/* Light Theme */
+html[data-theme="light"] {
+    /* Colors */
     --color-background: var(--oc-gray-1);
     --color-text: var(--oc-gray-8);
     --color-heading: var(--oc-gray-8);
@@ -158,17 +193,164 @@ html,html[data-theme=light]{
     --color-chunk: var(--oc-gray-8);
     --color-mark: var(--oc-yellow-3);
     --color-border: var(--oc-gray-4);
-    --color-button: var(--oc-gray-6)
+    --color-button: var(--oc-gray-6);
+    
+    /* Particles Theme */
+    --color-particles-text: var(--oc-gray-8);
+    --color-particles-background: var(--oc-gray-1);
+    
+    /* Card & Project Colors */
+    --card-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --tool-bg: #f0f0f0;
+    --tool-text: #666666;
+    --tool-bg-hover: #e0e0e0;
+
+    .expert p {
+        color: #000000;
+    }
+
+    #research h5{
+        color: #000000;
+    }
+    #project h5{
+        color: #000000;
+    }
+    .pub-container {
+        background: #f5f5f5;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+        display: flex;
+        gap: 2rem;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+        align-items: flex-start;
+    }   
+    .subheading{
+        color: #000000;
+    } 
+    .heading:hover {
+        color: #000000;
+        text-shadow: 0 0 8px rgba(12, 12, 235, 0.4);
+    }
+
+    .abstract {
+        color: #000000;
+    }   
+
+    .show-more:hover {
+        color: #000000;
+        text-shadow: 0 0 8px rgba(12, 12, 235, 0.4);        
+    }     
+    .key{
+        background: #ededed;
+    }
+    .keywords{
+        color: #000000;
+    }
+    .keywords a{
+        color: #1900ff;
+    }
+    #contact h5{
+        color: #000000;
+
+    }
 }
-html[data-theme=dark]{
-    --color-background: var(--oc-gray-9);
-    --color-text: var(--oc-gray-3);
-    --color-heading: var(--oc-gray-3);
-    --color-chunk: var(--oc-gray-8);
-    --color-mark: var(--oc-gray-8);
-    --color-border: var(--oc-gray-7);
-    --color-button: var(--oc-gray-7)
+
+/* Apply Theme Colors */
+body {
+    font-family: var(--type-serif);
+    font-size: var(--type-size);
+    font-weight: var(--type-weight);
+    line-height: var(--type-height);
+    font-variant-numeric: var(--type-numeric);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Header Theme */
+.site-header {
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.site-header-nav-item {
+    color: var(--color-text);
+}
+
+.pub-container {
+    background: var(--card-bg);
+    border-color: var(--color-border);
+}
+
+.content {
+    color: var(--text-primary);
+}
+
+.abstract {
+    color: var(--text-secondary);
+}
+
+/* Projects Theme */
+.project-card {
+    background: var(--card-bg);
+}
+
+.project-title {
+    color: var(--text-primary);
+}
+
+.project-description {
+    color: var(--text-secondary);
+}
+
+.tool {
+    background: var(--tool-bg);
+    color: var(--tool-text);
+}
+
+/* Particles.js Theme */
+#particles-js {
+    background-color: var(--color-particles-background);
+}
+
+#particles-js .particles-js-canvas-el {
+    opacity: 0.8;
+}
+
+/* Theme Transition Effects */
+.site-header,
+.pub-container,
+.project-card,
+.tool,
+#particles-js {
+    transition: all 0.3s ease;
+}
+
+#particles-js{
+    width:100%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:var(--color-particles-background)
+}
+#particles-js .particles-js-canvas-el{
+    width:100%;
+    height:99.5vh !important
+}
+
+.particles-photo{
+    width: 450px;
+    height: 500px;
+    border-radius:50%;
+    margin:auto;
+    margin-bottom:.5em;
+    float:left;
+}
+
 body{
     font-family:var(--type-serif);
     font-size:var(--type-size);
@@ -185,7 +367,6 @@ body{
     --icon-scale: 2.0;
     --icon-scale-mobile: 1.7;
 }
-/*Headers and particle-js*/
 
 h1,h2,h3{
     color:var(--color-heading)
@@ -213,26 +394,7 @@ h3{
     font-weight:500
 }
 
-#particles-js{
-    width:100%;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-attachment:fixed;
-    background-color:var(--color-particles-background)
-}
-#particles-js .particles-js-canvas-el{
-    width:100%;
-    height:99.5vh !important
-}
 
-.particles-photo{
-    width: 450px;
-    height: 500px;
-    border-radius:50%;
-    margin:auto;
-    margin-bottom:.5em;
-    float:left;
-}
 
 @media(prefers-color-scheme: dark){
     html,html[data-theme=dark]{
@@ -682,6 +844,9 @@ a:hover .site-logo {
         position: relative;
         z-index: 3;  /* Higher z-index than particles */
         pointer-events: auto;  /* Ensure clickable */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-title {
@@ -745,7 +910,6 @@ a:hover .site-logo {
 /* Research Section Styles */
 #research {
     padding: 4rem 2rem;
-    background: #171717;
     min-height: 100vh;
 }
 
@@ -758,6 +922,7 @@ a:hover .site-logo {
 .pub-container {
     background: #1C1C1C;
     border: 1px solid #2D2D2D;
+    box-shadow: 0 4px 6px rgb(65, 131, 196);    
     border-radius: 8px;
     padding: 2rem;
     margin-bottom: 2.5rem;
@@ -833,7 +998,7 @@ a.image-link:hover {
     margin-bottom: 0.75rem;
     line-height: 1.3;
     font-family: 'Times New Roman', serif;
-    color: #B8B8B8;
+    color: #8E8EA0;
     word-wrap: break-word;
     font-style: italic;
 }
@@ -962,6 +1127,9 @@ h5::after {
     }
     .key {
         padding: 0.875rem;
+        margin: 1rem auto;
+        width: 90%;
+        box-sizing: border-box;
     }
 
     .keywords {
@@ -1034,7 +1202,8 @@ h5::after {
 .project-card {
     background: var(--card-bg, #ffffff);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgb(65, 131, 196);
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
@@ -1103,29 +1272,6 @@ h5::after {
     transform: translateY(-1px);
 }
 
-/* Dark Mode Support (Optional) */
-@media (prefers-color-scheme: dark) {
-    .project-card {
-        background: var(--card-bg-dark, #1a1a1a);
-    }
-
-    .project-title {
-        color: var(--text-primary-dark, #ffffff);
-    }
-
-    .project-description {
-        color: var(--text-secondary-dark, #a0a0a0);
-    }
-
-    .tool {
-        background: var(--tool-bg-dark, #2a2a2a);
-        color: var(--tool-text-dark, #d0d0d0);
-    }
-
-    .tool:hover {
-        background: var(--tool-bg-dark-hover, #3a3a3a);
-    }
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -1151,15 +1297,7 @@ h5::after {
 
 html {
     scroll-padding-top: 0;
-}
-
-/* OR set it to match exactly your header height if you have a fixed header */
-html {
     scroll-padding-top: 50px; /* adjust to your header height */
-}
-
-/* And ensure smooth scrolling remains */
-html {
     scroll-behavior: smooth;
 }
 
