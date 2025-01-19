@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Resume
+title: Abdul's Resume
 permalink: /resume/
 ---
 <style>
@@ -12,12 +12,23 @@ body {
 }
 
 #pdf-container {
+    width: 100%;
+    max-width: 900px;
     margin: 40px auto 60px;
-    padding: 0 20px 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.col-lg-6{
-    width:75%;
+canvas {
+    display: block;
+    margin: 0 auto !important;
+    margin-bottom: -45px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    width: 100% !important;    
+    height: auto !important;
 }
 
 /* Download button styles */
@@ -265,16 +276,6 @@ body {
         font-size: 11px;
         padding: 5px 10px;
     }
-}
-
-canvas {
-    display: block;
-    margin: 0 auto !important;
-    margin-bottom: -45px !important;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    width: 100%;    
-    height: auto;
 }
 
 

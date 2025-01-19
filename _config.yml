@@ -1,12 +1,11 @@
-title: Hello, World! I’m Abdul - AI Enthusiast, Code Whisperer
+title: Hello, World! I’m Abdul - AI Enthusiast & Code Whisperer
 description: Abdul Homepage
 baseurl: ""
 url: https://sabdulrahman.github.io/
 
 # site settings
-taglong: <p>I’m a passionate technologist and final-year Computer Science PhD candidate specializing in leveraging AI, large language models, and cutting-edge technologies to solve complex challenges. From crafting AI that might take over the world (just kidding!) to building scalable software, I’m dedicated to creating meaningful impact through tech and collaboration.</p>
-  <p>Here, you’ll find my projects, insights, and contributions to the tech community. 
-  Whether you’re looking for collaboration, inspiration, or just want to discuss groundbreaking ideas, let’s connect and explore the possibilities together!</p>
+taglong: "<p>Ever since I typed my very first line of code, I've been captivated by the endless potential of technology to shape our world. Today, as a computer scientist and PhD candidate, I focus on harnessing AI, LLMs, and other cutting-edge tools to tackle complex problems and drive meaningful change. By bridging theoretical research with practical applications, I'm working to make complex systems more efficient, scalable, and impactful.</p>
+<p>Here, you’ll find my latest projects, insights, and collaborative endeavors aimed at pushing technology forward. Whether you’re seeking fresh inspiration or eager to dive into groundbreaking discussions, let’s connect and explore the possibilities!</p>"
 tagshort: Homepage
 
 # author settings
