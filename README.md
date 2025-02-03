@@ -1,6 +1,6 @@
-# Abdul Rahman's Personal Website
+# Abdul Rahman Shaikhs's Personal Website
 
-Welcome to the repository for my personal website! This site is built using Jekyll and hosted on GitHub Pages. It serves as an online portfolio, a place to showcase my work, share my experiences, and provide ways to get in touch with me.
+Welcome to the repository for my personal website! This site is built using Jekyll and hosted on GitHub Pages. It serves as an online portfolio, a place to showcase my work, share my experiences, and provide ways to get in touch with me. I am a PhD candidate at Northern Illinois University researching in AI, LLMs and HCI.
 
 🌐 **Live Site**: [sabdulrahman.github.io](https://sabdulrahman.github.io)
 
