@@ -21,8 +21,8 @@ Welcome to the repository for my personal website! This site is built using Jeky
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+   git clone https://github.com/sabdulrahman/sabdulrahman.github.io
+   cd sabdulrahman.github.io
    ```
 
 2. Install dependencies:
