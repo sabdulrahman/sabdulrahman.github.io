@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Abdul Rahman | Welcome
+title: Abdul Rahman Shaikh | Welcome
 ---
 
 
