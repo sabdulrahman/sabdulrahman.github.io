@@ -1,6 +1,6 @@
-# Abdul Rahman's Personal Website
+# Abdul Rahman Shaikhs's Personal Website
 
-Welcome to the repository for my personal website! This site is built using Jekyll and hosted on GitHub Pages. It serves as an online portfolio, a place to showcase my work, share my experiences, and provide ways to get in touch with me.
+Welcome to the repository for my personal website! This site is built using Jekyll and hosted on GitHub Pages. It serves as an online portfolio, a place to showcase my work, share my experiences, and provide ways to get in touch with me. I am a PhD candidate at Northern Illinois University researching in AI, LLMs and HCI.
 
 🌐 **Live Site**: [sabdulrahman.github.io](https://sabdulrahman.github.io)
 
@@ -21,8 +21,8 @@ Welcome to the repository for my personal website! This site is built using Jeky
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+   git clone https://github.com/sabdulrahman/sabdulrahman.github.io
+   cd sabdulrahman.github.io
    ```
 
 2. Install dependencies:
