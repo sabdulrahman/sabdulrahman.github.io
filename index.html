@@ -538,6 +538,27 @@ document.addEventListener('DOMContentLoaded', initializeTheme);
             </div>
         </div>
     </div>
+
+    <div class="pub-container">
+        <a href="/assets/files/itrace.png" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/files/itrace.png" loading="lazy" alt="An example of using iTrace" class="pub_image"></a>
+        <div class="content">
+            <div class="heading">iTrace : Interactive Tracing of Cross-View Data Relationships</div>
+            <div class="subheading">Abdul Rahman Shaikh, Maoyuan Sun, Xingchen Liu, Hamed Alhoori, and David Koop; Graphics Interface, 2025</div>
+            <div class="abstract" id="abstract-text">
+                <p>Abstract: Exploring data relations across multiple views has been a common task in many domains such as bioinformatics, cybersecurity, and healthcare. To support this, various techniques (e.g., visual links and brushing & linking) are used to show related visual elements across views via lines and highlights. However, understanding the relations using these techniques, when many related elements are scattered, can be difficult due to spatial distance and complexity. To address this, we present iTrace, an interactive visualization technique to effectively trace cross-view data relationships. iTrace leverages the concept of interactive focus transitions, which allows users to see and directly manipulate their focus as they navigate between views. By directing the user’s attention through smooth transitions between related elements, iTrace makes it easier to follow data relationships. We demonstrate the effectiveness of iTrace with a user study, and we conclude with a discussion of how iTrace can be broadly used to enhance data exploration in various types of visualizations.</p>                </div>
+            <span class="show-more" onclick="toggleAbstract(this)">Show more</span>
+            <div class="key" style="display: flex; align-items: center;">
+                <div class="keywords" style="display: flex; align-items: center; gap: 10px;">
+                    <strong>Keywords:</strong>Visual Analytics, Interaction Design, Multiple views<strong>Tools:</strong> JavaScript, Node.js, Python
+                    <!-- <a href="https://arxiv.org/pdf/2207.07558" target="_blank"> -->
+                        <!-- <img src="/assets/files/pdf_icon.png" alt="PDF Icon" style="height:auto; width:18px;">
+                      </a>
+                      <a href="https://arxiv.org/pdf/2207.07558" target="_blank">PDF</a> -->
+                </div>
+            </div>
+        </div>
+    </div>   
         <div class="pub-container">
             <a href="/assets/files/layout.png" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/files/layout.png" loading="lazy" alt="Layout Designs proposed in our research" class="pub_image"></a>
@@ -846,27 +867,7 @@ document.addEventListener('DOMContentLoaded', initializeTheme);
                 </div>
             </div>
         </article>
-        
-        <article class="project-card">
-            <div class="project-content">
-                <div class="project-header">
-                    <h3 class="project-title">VoxCore: Voice Authentication System</h3>
-                    <a href="https://github.com/sabdulrahman/VoxCore" aria-label="GitHub link to the VoxCore Project" class="github-link" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="github-icon">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                </div>
-                <p class="project-description">
-                    Implemented a voice authentication system using OpenAI's Whisper for transcription and custom PyTorch models for speaker verification, achieving 89% accuracy in multi-speaker environments. This system enhances security in voice-driven applications.
-                </p>
-                <div class="tools-used">
-                    <span class="tool">Python</span>
-                    <span class="tool">Whisper</span>
-                    <span class="tool">PyTorch</span>
-                </div>
-            </div>
-        </article>
+
 
         <article class="project-card">
             <div class="project-content">
@@ -910,8 +911,28 @@ document.addEventListener('DOMContentLoaded', initializeTheme);
                     <span class="tool">RAG</span>
                 </div>
             </div>
-        </article>
+        </article>        
         
+        <article class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <h3 class="project-title">VoxCore: Voice Authentication System</h3>
+                    <a href="https://github.com/sabdulrahman/VoxCore" aria-label="GitHub link to the VoxCore Project" class="github-link" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="github-icon">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="project-description">
+                    Implemented a voice authentication system using OpenAI's Whisper for transcription and custom PyTorch models for speaker verification, achieving 89% accuracy in multi-speaker environments. This system enhances security in voice-driven applications.
+                </p>
+                <div class="tools-used">
+                    <span class="tool">Python</span>
+                    <span class="tool">Whisper</span>
+                    <span class="tool">PyTorch</span>
+                </div>
+            </div>
+        </article>
         
         <article class="project-card">
             <div class="project-content">
@@ -1585,7 +1606,7 @@ function toggleMenu() {
 </section>
 <footer style="text-align: center;">
     <small>&copy;
-        <time datetime="2025-04-29T18:31:34+00:00">2025</time>
+        <time datetime="2025-04-29T18:42:22+00:00">2025</time>
         Abdul Rahman Shaikh</small>
 </footer>
 
