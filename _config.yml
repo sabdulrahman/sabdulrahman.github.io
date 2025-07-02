@@ -1,7 +1,7 @@
 title: Hello, World! I’m Abdul - AI Enthusiast & Code Whisperer
 description: Abdul Homepage
 baseurl: ""
-url: https://sabdulrahman.github.io/
+url: "https://sabdulrahman.github.io/"
 
 # site settings
 taglong: "<p>Ever since I typed my very first line of code, I've been captivated by the endless potential of technology to shape our world. Today, as a computer scientist and PhD candidate at Northern Illinois University, I focus on harnessing AI, LLMs, and other cutting-edge tools to tackle complex problems and drive meaningful change. By bridging theoretical research with practical applications, I'm working to make complex systems more efficient, scalable, and impactful.</p>
@@ -15,6 +15,9 @@ author:
 photo: assets/files/photo.jpeg
 address:
 phone: +1 224 848 8888
+
+plugins:
+  - jekyll-sitemap
 
 # social media links
 social:
