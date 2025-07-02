@@ -16,8 +16,6 @@ photo: assets/files/photo.jpeg
 address:
 phone: +1 224 848 8888
 
-plugins:
-  - jekyll-sitemap
 
 # social media links
 social:
