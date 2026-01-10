@@ -1,59 +1,155 @@
-# Abdul Rahman Shaikhs's Personal Website
+# Abdul Rahman Shaikh - Portfolio Website
 
-Welcome to the repository for my personal website! This site is built using Jekyll and hosted on GitHub Pages. It serves as an online portfolio, a place to showcase my work, share my experiences, and provide ways to get in touch with me. I am a PhD candidate at Northern Illinois University researching in AI, LLMs and HCI.
+A modern, professional portfolio website built with vanilla HTML, CSS, and JavaScript. Features a stunning animated background, glassmorphism navigation, and smooth animations.
 
-🌐 **Live Site**: [sabdulrahman.github.io](https://sabdulrahman.github.io)
+## 🚀 Quick Start
 
-## Technologies Used
+Simply open `index.html` in your browser, or deploy to GitHub Pages.
 
-- **HTML5 & CSS**: For structuring and styling the pages
-- **JavaScript**: For interactivity and additional functionality
-- **Jekyll**: Static site generator
-- **GitHub Pages**: For hosting the website
+### Local Development
 
-## Getting Started
+```bash
+# Using Python
+python -m http.server 8000
 
-### Prerequisites
+# Using Node.js
+npx serve
 
-- Ruby and Bundler installed on your machine
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sabdulrahman/sabdulrahman.github.io
-   cd sabdulrahman.github.io
-   ```
-
-2. Install dependencies:
-   ```bash
-   bundle install
-   ```
-
-3. Run the site locally:
-   ```bash
-   bundle exec jekyll serve
-   ```
-
-4. Open your browser and visit [http://localhost:4000](http://localhost:4000)
-
-## File Structure
-
-```
-.
-├── _includes/    #HTML snippets reused across the site
-├── _layouts/     #Page templates
-├── assets/       #CSS, JavaScript, and images
-└── _config.yml   #Site configuration
+# Using PHP
+php -S localhost:8000
 ```
 
-## Customization
+Then visit `http://localhost:8000`
 
-Feel free to customize this website to fit your personal brand. You can modify the styles, content, and structure as needed.
+## 📁 Project Structure
 
-## Contact
+```
+portfolio/
+├── index.html              # Homepage
+├── about.html              # About page (to be created)
+├── work.html               # Work/Projects page (to be created)
+├── contact.html            # Contact page (to be created)
+├── README.md               # This file
+│
+├── css/
+│   ├── main.css            # Main stylesheet (imports all others)
+│   ├── variables.css       # CSS custom properties (design tokens)
+│   ├── reset.css           # CSS reset and base styles
+│   ├── utilities.css       # Utility classes
+│   │
+│   ├── components/
+│   │   ├── nav.css         # Navigation component
+│   │   ├── buttons.css     # Button components
+│   │   ├── social.css      # Social links component
+│   │   └── background.css  # Animated background
+│   │
+│   └── sections/
+│       └── hero.css        # Hero section styles
+│
+├── js/
+│   ├── main.js             # Main JavaScript entry point
+│   │
+│   ├── components/
+│   │   └── navigation.js   # Navigation functionality
+│   │
+│   └── utils/
+│       ├── smoothScroll.js # Smooth scrolling utility
+│       └── animations.js   # Animation utilities
+│
+└── assets/
+    ├── images/             # Image assets
+    │   ├── favicon.png
+    │   ├── og-image.png
+    │   └── ...
+    │
+    ├── fonts/              # Custom fonts (if any)
+    └── resume.pdf          # Resume download
+```
 
-Let's connect! You can reach me through:
+## 🎨 Design System
 
-- ✉️ **Email**: [iamsabdurahman@gmail.com](mailto:iamsabdurahman@gmail.com)
-- 💼 **LinkedIn**: [Abdul Rahman Shaikh](https://www.linkedin.com/in/abdul-rahman-shaikh-234631148/)
+### Colors
+
+```css
+--color-bg: #050508;              /* Primary background */
+--color-text: #f0f0f5;            /* Primary text */
+--color-text-muted: #8a8a9a;      /* Muted text */
+--color-accent: #6b7fd4;          /* Blue accent */
+--color-accent-warm: #c4a57b;     /* Gold accent */
+```
+
+### Typography
+
+- **Display Font**: Cormorant Garamond (elegant serif)
+- **Body Font**: Outfit (modern sans-serif)
+
+### Components
+
+All components follow BEM naming convention:
+- `.component`
+- `.component__element`
+- `.component--modifier`
+
+## 🔧 Customization
+
+### Changing Colors
+
+Edit `css/variables.css` to modify the color scheme:
+
+```css
+:root {
+    --color-accent: #your-color;
+    --color-accent-warm: #your-color;
+}
+```
+
+### Adding New Pages
+
+1. Create a new HTML file (e.g., `about.html`)
+2. Copy the structure from `index.html`
+3. Create corresponding section styles in `css/sections/`
+4. Update navigation links
+
+### Adding New Components
+
+1. Create CSS file in `css/components/`
+2. Import it in `css/main.css`
+3. Create JS module in `js/components/` if needed
+4. Import and initialize in `js/main.js`
+
+## 📱 Responsive Breakpoints
+
+- **Desktop**: > 1024px
+- **Tablet**: 768px - 1024px
+- **Mobile**: < 768px
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📦 Deployment
+
+### GitHub Pages
+
+1. Push to your GitHub repository
+2. Go to Settings > Pages
+3. Select "main" branch and "/" (root)
+4. Your site will be live at `https://username.github.io/repo-name`
+
+### Netlify / Vercel
+
+Simply connect your repository and deploy automatically.
+
+## 📄 License
+
+MIT License - Feel free to use this template for your own portfolio.
+
+## 👤 Author
+
+**Abdul Rahman Shaikh**
+- GitHub: [@sabdulrahman](https://github.com/sabdulrahman)
+- LinkedIn: [@iamsabdurahman](https://www.linkedin.com/in/iamsabdurahman/)
+- Email: iamsabdurahman@gmail.com
