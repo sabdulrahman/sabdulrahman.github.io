@@ -72,10 +72,10 @@
 <body>
 
 
-    <!-- Ambient Background Gradient -->
-    <div class="ambient-background">
-        <div class="ambient-background__gradient"></div>
-    </div>
+    <div data-us-project="0WrRbFIPaKoWVkiQWBG0" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+    <script type="text/javascript">
+      !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+    </script>
 
 
     <div class="nav-wrapper">
@@ -145,19 +145,40 @@
                   ideas with robust, product-grade execution.
                 </p>
                 <div class="hero__actions">
-                    <a href="#research" class="btn btn--primary">
-                        <svg class="btn__icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <a href="#projects" class="group inline-flex overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(245,158,11,0.2)] rounded-full p-[1px] relative items-center justify-center">
+                    <!-- Spinning Border Beam (Visible on Hover) - Amber color -->
+                    <span class="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#f59e0b_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                    
+                    <!-- Default Static Border -->
+                    <span class="absolute inset-0 rounded-full bg-zinc-800 transition-opacity duration-300 group-hover:opacity-0"></span>
+                    
+                    <!-- 3D Button Surface & Content -->
+                    <span class="flex items-center justify-center gap-2 uppercase transition-colors duration-300 group-hover:text-amber-400 text-xs font-medium text-zinc-400 tracking-widest bg-gradient-to-b from-zinc-800 to-zinc-950 w-full h-full rounded-full py-2.5 px-6 relative shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]">
+                        <span class="relative z-10">View Work</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
                         </svg>
-                        View Work
-                    </a>
-                    <a href="mailto:iamsabdurahman@gmail.com" class="btn btn--secondary">
-                        <svg class="btn__icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="4" width="20" height="16" rx="2"/>
-                            <path d="M22 6l-10 7L2 6"/>
-                        </svg>
-                        Get in Touch
-                    </a>
+                    </span>
+                </a>
+<a href="#contact" class="get-in-touch-btn group flex overflow-hidden uppercase transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(234,88,12,0.5)] focus:outline-none text-sm font-medium text-white tracking-widest rounded-full py-5 px-12 relative items-center justify-center">
+  <!-- Full Border Beam (Single Beam) -->
+  <div class="absolute inset-0 -z-20 rounded-full overflow-hidden p-[1px]">
+      <div class="beam-spinner absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#ea580c_360deg)]"></div>
+      <div class="absolute inset-[1px] rounded-full bg-black"></div>
+  </div>
+
+  <!-- Inner Background & Effects -->
+  <div class="-z-10 overflow-hidden bg-zinc-950 rounded-full absolute top-[2px] right-[2px] bottom-[2px] left-[2px]">
+      <div class="absolute inset-0 bg-gradient-to-b from-zinc-800/60 to-transparent"></div>
+      <div class="dots-pattern opacity-30 mix-blend-overlay absolute inset-0"></div>
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-orange-500/10 blur-2xl rounded-full pointer-events-none transition-colors duration-500 group-hover:bg-orange-500/30"></div>
+  </div>
+
+  <!-- Content -->
+  <span class="relative z-10 text-white/90 transition-colors group-hover:text-white">Get in Touch</span>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 ml-2 transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</a>
                 </div>
             </div>
             
@@ -940,7 +961,9 @@
                                       <span class="text-white/20">•</span>
                                       <span class="text-xs text-white/50">React</span>
                                   </div>
-                                  <h3 class="text-xl font-semibold tracking-tight mb-2">LLMFlow: Summarization of Documents</h3>
+                                  <a href="https://github.com/sabdulrahman/LLMFlow" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
+                                    <h3 class="text-xl font-semibold tracking-tight mb-2">LLMFlow: Summarization of Documents</h3>
+                                  </a>
                                   <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
                                       Summarization + Q&A for large-scale scholarly PDFs using Llama/Ollama + DeepSeek/GPT via LangChain.
                                   </p>
@@ -986,8 +1009,10 @@
                                       <span class="text-white/20">•</span>
                                       <span class="text-xs text-white/50">RAG</span>
                                   </div>
-                                  <h3 class="text-xl font-semibold tracking-tight mb-2">Rufus: Data Extraction for LLMs</h3>
-                                  <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
+                                  <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
+                                    <h3 class="text-xl font-semibold tracking-tight mb-2">Rufus: Data Extraction for LLMs</h3>
+                                </a>
+                                <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
                                       AI-powered web crawler that extracts and synthesizes content into structured documents for RAG pipelines.
                                   </p>
                                   <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer"
@@ -1032,7 +1057,9 @@
                                       <span class="text-white/20">•</span>
                                       <span class="text-xs text-white/50">Flask</span>
                                   </div>
-                                  <h3 class="text-xl font-semibold tracking-tight mb-2">ChatFit: Personalized Fitness Chatbot</h3>
+                                  <a href="https://github.com/sabdulrahman/ChatFit" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
+                                    <h3 class="text-xl font-semibold tracking-tight mb-2">ChatFit: Personalized Fitness Chatbot</h3>
+                                </a>
                                   <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
                                       Conversational fitness chatbot that generates personalized workout + diet plans based on user goals.
                                   </p>
@@ -1078,7 +1105,9 @@
                                       <span class="text-white/20">•</span>
                                       <span class="text-xs text-white/50">Docker</span>
                                   </div>
-                                  <h3 class="text-xl font-semibold tracking-tight mb-2">Pexos: Safe Python Execution Sandbox</h3>
+                                  <a href="https://github.com/sabdulrahman/pexos" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
+                                    <h3 class="text-xl font-semibold tracking-tight mb-2">Pexos: Safe Python Execution Sandbox</h3>
+                                </a>
                                   <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
                                       Secure Python execution service for untrusted code with syscall restrictions and resource limits.
                                   </p>
@@ -1124,7 +1153,9 @@
                                       <span class="text-white/20">•</span>
                                       <span class="text-xs text-white/50">FastAPI</span>
                                   </div>
-                                  <h3 class="text-xl font-semibold tracking-tight mb-2">GenHealth: Medical Report Analysis</h3>
+                                  <a href="https://github.com/sabdulrahman/GenHealth" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
+                                    <h3 class="text-xl font-semibold tracking-tight mb-2">GenHealth: Medical Report Analysis</h3>
+                                </a>
                                   <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
                                       Multimodal pipeline that fuses clinical text, medical imaging, and structured signals.
                                   </p>

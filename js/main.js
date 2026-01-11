@@ -187,7 +187,8 @@ if (projectsContainer && projectsTrack && projectsDots) {
     let isDown = false;
     let startX;
     let scrollLeft;
-    let hasMoved = false;
+    let isDragging = false;
+    const DRAG_THRESHOLD = 8; // pixels - movement below this is considered a click
 
     const projectCards = projectsTrack.querySelectorAll('.project-card');
 
@@ -243,35 +244,55 @@ if (projectsContainer && projectsTrack && projectsDots) {
 
     // Mouse events
     projectsContainer.addEventListener('mousedown', (e) => {
+        // Don't initiate drag if clicking on a link
+        if (e.target.closest('a')) return;
+        
         isDown = true;
-        hasMoved = false;
+        isDragging = false;
         projectsContainer.classList.add('is-dragging');
-        startX = e.pageX - projectsContainer.offsetLeft;
+        startX = e.pageX;
         scrollLeft = projectsContainer.scrollLeft;
     });
 
-    projectsContainer.addEventListener('mouseleave', () => {
-        isDown = false;
-        projectsContainer.classList.remove('is-dragging');
+    document.addEventListener('mouseleave', () => {
+        if (isDown) {
+            isDown = false;
+            projectsContainer.classList.remove('is-dragging');
+        }
     });
 
-    projectsContainer.addEventListener('mouseup', () => {
-        isDown = false;
-        projectsContainer.classList.remove('is-dragging');
+    document.addEventListener('mouseup', () => {
+        if (isDown) {
+            isDown = false;
+            projectsContainer.classList.remove('is-dragging');
+            
+            // Reset isDragging after a short delay
+            setTimeout(() => {
+                isDragging = false;
+            }, 50);
+        }
     });
 
-    projectsContainer.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => {
         if (!isDown) return;
-        e.preventDefault();
-        hasMoved = true;
-        const x = e.pageX - projectsContainer.offsetLeft;
-        const walk = (x - startX) * 2;
-        projectsContainer.scrollLeft = scrollLeft - walk;
+        
+        const x = e.pageX;
+        const walk = x - startX;
+        
+        // Only start dragging if we've moved beyond threshold
+        if (Math.abs(walk) > DRAG_THRESHOLD) {
+            isDragging = true;
+            e.preventDefault();
+        }
+        
+        if (isDragging) {
+            projectsContainer.scrollLeft = scrollLeft - walk;
+        }
     });
 
-    // Prevent click on links after drag
+    // Only prevent clicks if we actually dragged
     projectsContainer.addEventListener('click', (e) => {
-        if (hasMoved) {
+        if (isDragging) {
             e.preventDefault();
             e.stopPropagation();
         }
@@ -280,16 +301,31 @@ if (projectsContainer && projectsTrack && projectsDots) {
     // Touch support
     let touchStartX;
     let touchScrollLeft;
+    let touchIsDragging = false;
 
     projectsContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].pageX - projectsContainer.offsetLeft;
+        touchStartX = e.touches[0].pageX;
         touchScrollLeft = projectsContainer.scrollLeft;
+        touchIsDragging = false;
     }, { passive: true });
 
     projectsContainer.addEventListener('touchmove', (e) => {
-        const x = e.touches[0].pageX - projectsContainer.offsetLeft;
-        const walk = (x - touchStartX) * 2;
-        projectsContainer.scrollLeft = touchScrollLeft - walk;
+        const x = e.touches[0].pageX;
+        const walk = x - touchStartX;
+        
+        if (Math.abs(walk) > DRAG_THRESHOLD) {
+            touchIsDragging = true;
+        }
+        
+        if (touchIsDragging) {
+            projectsContainer.scrollLeft = touchScrollLeft - walk;
+        }
+    }, { passive: true });
+
+    projectsContainer.addEventListener('touchend', () => {
+        setTimeout(() => {
+            touchIsDragging = false;
+        }, 50);
     }, { passive: true });
 
     // Scroll listener for dots
