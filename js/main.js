@@ -1,6 +1,6 @@
 /**
  * Portfolio - Abdul Rahman Shaikh
- * Main JavaScript
+ * Main JavaScript (Updated)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -42,31 +42,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- SCROLL REVEALS & COUNTERS ---
+    // --- THEME TOGGLE ---
+    const htmlEl = document.documentElement;
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    htmlEl.setAttribute('data-theme', savedTheme);
+
+    function toggleTheme() {
+        const current = htmlEl.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        htmlEl.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+    }
+
+    document.querySelector('[data-theme-toggle]')?.addEventListener('click', toggleTheme);
+    document.querySelector('[data-theme-toggle-mobile]')?.addEventListener('click', toggleTheme);
+
+    // --- DOCUMENT DOWNLOAD DROPDOWN ---
+    const docDropdown = document.querySelector('[data-doc-dropdown]');
+    if (docDropdown) {
+        const dropdownBtn = docDropdown.querySelector('.nav__cta');
+        
+        const toggleDropdown = (open) => {
+            docDropdown.classList.toggle('is-open', open);
+            dropdownBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        };
+
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown(!docDropdown.classList.contains('is-open'));
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!docDropdown.contains(e.target)) {
+                toggleDropdown(false);
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') toggleDropdown(false);
+        });
+    }
+
+    // --- SCROLL REVEALS ---
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                if (entry.target.classList.contains('counter')) {
-                    const target = +entry.target.dataset.target;
-                    let count = 0;
-                    const inc = target / 50;
-                    const timer = setInterval(() => {
-                        count += inc;
-                        if (count >= target) {
-                            entry.target.textContent = target;
-                            clearInterval(timer);
-                        } else {
-                            entry.target.textContent = Math.ceil(count);
-                        }
-                    }, 30);
-                }
                 revealObserver.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal-item, .split-line, .draw-path, .counter').forEach(el => {
+    document.querySelectorAll('.reveal-item').forEach(el => {
         revealObserver.observe(el);
     });
 
@@ -75,11 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav__link');
     const mobileNavLinks = document.querySelectorAll('.mobile-menu__link[href^="#"]');
 
-    // Map sections to their nav targets (impact -> stack/About)
+    // Map sections to their nav targets
     const sectionToNav = {
         'home': '#home',
-        'stack': '#stack',
-        'impact': '#stack',  // Impact highlights About
+        'about': '#about',
+        'experience': '#experience',
         'research': '#research',
         'projects': '#projects',
         'contact': '#contact'
@@ -116,10 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     
-        // Get the nav target for this section
         const navTarget = sectionToNav[currentSection] || `#${currentSection}`;
     
-        // Update desktop nav links
         navLinks.forEach(link => {
             link.classList.remove('nav__link--active');
             if (link.getAttribute('href') === navTarget) {
@@ -127,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     
-        // Update mobile nav links
         mobileNavLinks.forEach(link => {
             link.classList.remove('mobile-menu__link--active');
             if (link.getAttribute('href') === navTarget) {
@@ -137,297 +163,65 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- SCROLL EFFECTS ---
-    const progressBar = document.getElementById('progress-bar');
-
     window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-        // Update active navigation
         updateActiveNav();
-
-        // Progress bar
-        if (progressBar) {
-            progressBar.style.width = `${(scrollTop / docHeight) * 100}%`;
-        }
-
-        // Parallax backgrounds
-        document.querySelectorAll('.parallax-bg').forEach(bg => {
-            const speed = bg.dataset.speed || 0.5;
-            const img = bg.querySelector('img');
-            if (img) img.style.transform = `translateY(${scrollTop * speed}px) scale(1.1)`;
-        });
-
     }, { passive: true });
 
     // Initialize on page load
     updateActiveNav();
 
-    // --- MAGNETIC ELEMENTS ---
-    document.querySelectorAll('.magnetic-wrap').forEach(wrap => {
-        const content = wrap.querySelector('.magnetic-content');
-        if (!content) return;
-        wrap.addEventListener('mousemove', (e) => {
-            const rect = wrap.getBoundingClientRect();
-            const x = (e.clientX - rect.left - rect.width / 2) * 0.8;
-            const y = (e.clientY - rect.top - rect.height / 2) * 0.8;
-            content.style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
-        });
-        wrap.addEventListener('mouseleave', () => {
-            content.style.transform = 'translate(0, 0) scale(1)';
-        });
-    });
+    // --- PAPER FILTERS (theme-aware, with scroll) ---
+    const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
+    const paperCards = document.querySelectorAll('.paper-card');
+    const papersContainer = document.getElementById('papers-container');
 
-// --- DRAGGABLE HORIZONTAL SCROLL FOR PROJECTS ---
-const projectsContainer = document.getElementById('projectsScroller');
-const projectsTrack = document.getElementById('projectsTrack');
-const projectsDots = document.getElementById('projectsDots');
-
-if (projectsContainer && projectsTrack && projectsDots) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let isDragging = false;
-    const DRAG_THRESHOLD = 8; // pixels - movement below this is considered a click
-
-    const projectCards = projectsTrack.querySelectorAll('.project-card');
-
-    // Generate dots
-    projectsDots.innerHTML = '';
-    projectCards.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.className = 'project-dot' + (index === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', `Go to project ${index + 1}`);
-        dot.addEventListener('click', () => scrollToCard(index));
-        projectsDots.appendChild(dot);
-    });
-
-    const dots = projectsDots.querySelectorAll('.project-dot');
-
-    // Scroll to specific card
-    function scrollToCard(index) {
-        const card = projectCards[index];
-        if (!card) return;
-        
-        const containerRect = projectsContainer.getBoundingClientRect();
-        const cardRect = card.getBoundingClientRect();
-        const scrollTarget = projectsContainer.scrollLeft + cardRect.left - containerRect.left - 24;
-        
-        projectsContainer.scrollTo({
-            left: scrollTarget,
-            behavior: 'smooth'
-        });
-    }
-
-    // Update active dot
-    function updateActiveDot() {
-        const containerRect = projectsContainer.getBoundingClientRect();
-        const containerLeft = containerRect.left;
-
-        let closestIndex = 0;
-        let closestDistance = Infinity;
-
-        projectCards.forEach((card, index) => {
-            const cardRect = card.getBoundingClientRect();
-            const distance = Math.abs(cardRect.left - containerLeft - 24);
-
-            if (distance < closestDistance) {
-                closestDistance = distance;
-                closestIndex = index;
-            }
-        });
-
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === closestIndex);
-        });
-    }
-
-    // Mouse events
-    projectsContainer.addEventListener('mousedown', (e) => {
-        // Don't initiate drag if clicking on a link
-        if (e.target.closest('a')) return;
-        
-        isDown = true;
-        isDragging = false;
-        projectsContainer.classList.add('is-dragging');
-        startX = e.pageX;
-        scrollLeft = projectsContainer.scrollLeft;
-    });
-
-    document.addEventListener('mouseleave', () => {
-        if (isDown) {
-            isDown = false;
-            projectsContainer.classList.remove('is-dragging');
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        if (isDown) {
-            isDown = false;
-            projectsContainer.classList.remove('is-dragging');
+    function filterPapers(filter) {
+        // Update button states with theme-aware classes
+        filterButtons.forEach(btn => {
+            const isActive = btn.dataset.filter === filter;
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
             
-            // Reset isDragging after a short delay
-            setTimeout(() => {
-                isDragging = false;
-            }, 50);
-        }
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        
-        const x = e.pageX;
-        const walk = x - startX;
-        
-        // Only start dragging if we've moved beyond threshold
-        if (Math.abs(walk) > DRAG_THRESHOLD) {
-            isDragging = true;
-            e.preventDefault();
-        }
-        
-        if (isDragging) {
-            projectsContainer.scrollLeft = scrollLeft - walk;
-        }
-    });
-
-    // Only prevent clicks if we actually dragged
-    projectsContainer.addEventListener('click', (e) => {
-        if (isDragging) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    }, true);
-
-    // Touch support
-    let touchStartX;
-    let touchScrollLeft;
-    let touchIsDragging = false;
-
-    projectsContainer.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].pageX;
-        touchScrollLeft = projectsContainer.scrollLeft;
-        touchIsDragging = false;
-    }, { passive: true });
-
-    projectsContainer.addEventListener('touchmove', (e) => {
-        const x = e.touches[0].pageX;
-        const walk = x - touchStartX;
-        
-        if (Math.abs(walk) > DRAG_THRESHOLD) {
-            touchIsDragging = true;
-        }
-        
-        if (touchIsDragging) {
-            projectsContainer.scrollLeft = touchScrollLeft - walk;
-        }
-    }, { passive: true });
-
-    projectsContainer.addEventListener('touchend', () => {
-        setTimeout(() => {
-            touchIsDragging = false;
-        }, 50);
-    }, { passive: true });
-
-    // Scroll listener for dots
-    projectsContainer.addEventListener('scroll', updateActiveDot, { passive: true });
-
-    // Initialize
-    updateActiveDot();
-}
-
-    // --- 3D TILT CARD ---
-    const tiltWrap = document.querySelector('.tilt-card-wrapper');
-    const tiltCard = document.querySelector('.tilt-card');
-    if (tiltWrap && tiltCard) {
-        tiltWrap.addEventListener('mousemove', (e) => {
-            const rect = tiltWrap.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 30;
-            const y = ((e.clientY - rect.top) / rect.height - 0.5) * -30;
-            tiltCard.style.transform = `perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+            // Remove all Tailwind color classes
+            btn.classList.remove('bg-white', 'text-black', 'border', 'border-white/20', 'text-white/60', 'hover:bg-white/10');
+            // Remove our theme classes
+            btn.classList.remove('filter-btn--active', 'filter-btn--inactive');
+            
+            // Apply theme-aware class
+            btn.classList.add(isActive ? 'filter-btn--active' : 'filter-btn--inactive');
         });
-        tiltWrap.addEventListener('mouseleave', () => {
-            tiltCard.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+
+        // Show/hide papers
+        paperCards.forEach(paper => {
+            paper.classList.toggle('hidden', !paper.classList.contains(filter));
         });
-    }
 
-    // --- CHART.JS ---
-    const evalChartEl = document.getElementById('evalChart');
-    if (evalChartEl && window.Chart) {
-        const ctx = evalChartEl.getContext('2d');
-        const gradient = ctx.createLinearGradient(0, 0, 0, 180);
-        gradient.addColorStop(0, 'rgba(255,255,255,0.5)');
-        gradient.addColorStop(1, 'rgba(255,255,255,0.05)');
-
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6'],
-                datasets: [{
-                    label: 'gpt-4o-mini',
-                    data: [64, 68, 71, 74, 78, 82],
-                    borderColor: '#ffffff',
-                    backgroundColor: gradient,
-                    fill: true,
-                    tension: 0.35,
-                    pointRadius: 2,
-                    borderWidth: 1.5
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false,
-                        backgroundColor: 'rgba(0,0,0,0.8)',
-                        borderColor: 'rgba(255,255,255,0.1)',
-                        borderWidth: 1
-                    }
-                },
-                scales: {
-                    x: {
-                        ticks: { color: 'rgba(255,255,255,0.7)', font: { size: 11 } },
-                        grid: { color: 'rgba(255,255,255,0.06)' }
-                    },
-                    y: {
-                        suggestedMin: 50,
-                        suggestedMax: 90,
-                        ticks: {
-                            color: 'rgba(255,255,255,0.7)',
-                            font: { size: 11 },
-                            callback: v => v + '%'
-                        },
-                        grid: { color: 'rgba(255,255,255,0.06)' }
-                    }
-                }
+        // Scroll to first visible paper — offset for fixed nav
+        if (papersContainer) {
+            const firstVisible = papersContainer.querySelector('.paper-card:not(.hidden)');
+            if (firstVisible) {
+                setTimeout(() => {
+                    const navHeight = document.querySelector('.nav')?.offsetHeight || 80;
+                    const y = firstVisible.getBoundingClientRect().top + window.scrollY - navHeight - 32;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }, 50);
             }
-        });
+        }
     }
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterPapers(btn.dataset.filter);
+        });
+    });
+
+    // Initialize filter buttons with theme-aware classes on load
+    filterButtons.forEach(btn => {
+        const isActive = btn.getAttribute('aria-pressed') === 'true';
+        btn.classList.remove('bg-white', 'text-black', 'border', 'border-white/20', 'text-white/60', 'hover:bg-white/10');
+        btn.classList.add(isActive ? 'filter-btn--active' : 'filter-btn--inactive');
+    });
 
     // --- YEAR UPDATE ---
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
-
-// --- PAPER FILTERS (global for onclick) ---
-function filterPapers(filter) {
-    const papers = document.querySelectorAll('.paper-card');
-    const buttons = document.querySelectorAll('.filter-btn');
-
-    buttons.forEach(btn => {
-        btn.classList.remove('bg-white', 'text-black');
-        btn.classList.add('border', 'border-white/20', 'text-white/60', 'hover:bg-white/10');
-    });
-
-    const activeBtn = document.getElementById(`filter-${filter}`);
-    if (activeBtn) {
-        activeBtn.classList.remove('border', 'border-white/20', 'text-white/60', 'hover:bg-white/10');
-        activeBtn.classList.add('bg-white', 'text-black');
-    }
-
-    papers.forEach(paper => {
-        paper.classList.toggle('hidden', !paper.classList.contains(filter));
-    });
-}

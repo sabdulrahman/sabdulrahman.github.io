@@ -1,155 +1,102 @@
-# Abdul Rahman Shaikh - Portfolio Website
+# Abdul Rahman Shaikh — Portfolio
 
-A modern, professional portfolio website built with vanilla HTML, CSS, and JavaScript. Features a stunning animated background, glassmorphism navigation, and smooth animations.
+Personal portfolio and research site. Built with vanilla HTML, CSS, and JavaScript. Dark/light theme, responsive, single-page.
 
-## 🚀 Quick Start
+**Live:** [sabdulrahman.github.io](https://sabdulrahman.github.io/)
 
-Simply open `index.html` in your browser, or deploy to GitHub Pages.
-
-### Local Development
+## Quick Start
 
 ```bash
-# Using Python
+# Any local server works
 python -m http.server 8000
-
-# Using Node.js
 npx serve
-
-# Using PHP
-php -S localhost:8000
 ```
 
-Then visit `http://localhost:8000`
+Open `http://localhost:8000`
 
-## 📁 Project Structure
+## Structure
 
 ```
-portfolio/
-├── index.html              # Homepage
-├── about.html              # About page (to be created)
-├── work.html               # Work/Projects page (to be created)
-├── contact.html            # Contact page (to be created)
-├── README.md               # This file
-│
+├── index.html                # Single-page site
 ├── css/
-│   ├── main.css            # Main stylesheet (imports all others)
-│   ├── variables.css       # CSS custom properties (design tokens)
-│   ├── reset.css           # CSS reset and base styles
-│   ├── utilities.css       # Utility classes
-│   │
-│   ├── components/
-│   │   ├── nav.css         # Navigation component
-│   │   ├── buttons.css     # Button components
-│   │   ├── social.css      # Social links component
-│   │   └── background.css  # Animated background
-│   │
-│   └── sections/
-│       └── hero.css        # Hero section styles
-│
+│   └── portfolio.css         # All styles (theme system, components, responsive, light/dark overrides)
 ├── js/
-│   ├── main.js             # Main JavaScript entry point
-│   │
-│   ├── components/
-│   │   └── navigation.js   # Navigation functionality
-│   │
-│   └── utils/
-│       ├── smoothScroll.js # Smooth scrolling utility
-│       └── animations.js   # Animation utilities
-│
-└── assets/
-    ├── images/             # Image assets
-    │   ├── favicon.png
-    │   ├── og-image.png
-    │   └── ...
-    │
-    ├── fonts/              # Custom fonts (if any)
-    └── resume.pdf          # Resume download
+│   └── main.js               # Navigation, theme toggle, filters, scroll spy
+├── assets/
+│   ├── images/
+│   │   ├── profile.png       # Hero photo
+│   │   ├── favicon.png
+│   │   └── og-image.png      # Social sharing image
+│   ├── resume.pdf            # 1-2 page resume
+│   └── cv.pdf                # Full academic CV
+└── README.md
 ```
 
-## 🎨 Design System
+## Sections
 
-### Colors
+1. **Hero** — Name, tagline (role + IEEE VIS Best Paper), description, CTAs
+2. **About** — Bio, stats row, education, core skills (ML/DS, LLM/GenAI, Data/Infra, Languages)
+3. **Experience** — 3-column card layout (date | content | metrics) for NIU, Amazon, TA roles
+4. **Research** — Sticky sidebar with filter pills (Selected/Published/Preprints), 9 paper cards
+5. **Projects** — 2-column text-only grid with colored accent borders per category
+6. **Contact** — Email, Calendly booking, social links
+
+## Features
+
+- **Dark/Light theme** — Toggle in nav (persists via localStorage). Light theme has dot-grid + gradient background.
+- **Resume/CV dropdown** — Nav button with two download options
+- **Availability badge** — Green pulsing indicator in About section
+- **Research filters** — Selected/Published/Preprint pills with smooth scroll to first result
+- **Scroll spy** — Active nav link updates on scroll
+- **Mobile menu** — Hamburger with backdrop, theme toggle, resume/CV links
+- **Reduced motion** — Respects `prefers-reduced-motion`
+- **SEO** — Open Graph, Twitter cards, JSON-LD structured data, semantic HTML
+
+## Theme System
+
+Colors are defined as CSS variables with two complete palettes:
 
 ```css
---color-bg: #050508;              /* Primary background */
---color-text: #f0f0f5;            /* Primary text */
---color-text-muted: #8a8a9a;      /* Muted text */
---color-accent: #6b7fd4;          /* Blue accent */
---color-accent-warm: #c4a57b;     /* Gold accent */
+/* Dark (default) */
+--color-bg: #050505;
+--color-text: #f0f0f0;
+--color-accent: #d4a54a;
+
+/* Light */
+--color-bg: #f8f7f4;
+--color-text: #1a1a1a;
+--color-accent: #b8892e;
 ```
 
-### Typography
+Light theme overrides use `html[data-theme="light"]` selectors for specificity over Tailwind CDN utilities.
 
-- **Display Font**: Cormorant Garamond (elegant serif)
-- **Body Font**: Outfit (modern sans-serif)
+## Dependencies
 
-### Components
+External (CDN):
+- [Tailwind CSS](https://tailwindcss.com/) — Utility classes
+- [Lucide Icons](https://lucide.dev/) — Icon set
+- [Google Fonts](https://fonts.google.com/) — Geist, Space Grotesk, Geist Mono
+- [UnicornStudio](https://www.unicorn.studio/) — Animated background
 
-All components follow BEM naming convention:
-- `.component`
-- `.component__element`
-- `.component--modifier`
+No build step required.
 
-## 🔧 Customization
+## Deploy
 
-### Changing Colors
+Already configured for GitHub Pages:
 
-Edit `css/variables.css` to modify the color scheme:
-
-```css
-:root {
-    --color-accent: #your-color;
-    --color-accent-warm: #your-color;
-}
+```bash
+git add .
+git commit -m "Update portfolio"
+git push
 ```
 
-### Adding New Pages
+Site auto-deploys from the main branch root.
 
-1. Create a new HTML file (e.g., `about.html`)
-2. Copy the structure from `index.html`
-3. Create corresponding section styles in `css/sections/`
-4. Update navigation links
-
-### Adding New Components
-
-1. Create CSS file in `css/components/`
-2. Import it in `css/main.css`
-3. Create JS module in `js/components/` if needed
-4. Import and initialize in `js/main.js`
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: > 1024px
-- **Tablet**: 768px - 1024px
-- **Mobile**: < 768px
-
-## 🌐 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📦 Deployment
-
-### GitHub Pages
-
-1. Push to your GitHub repository
-2. Go to Settings > Pages
-3. Select "main" branch and "/" (root)
-4. Your site will be live at `https://username.github.io/repo-name`
-
-### Netlify / Vercel
-
-Simply connect your repository and deploy automatically.
-
-## 📄 License
-
-MIT License - Feel free to use this template for your own portfolio.
-
-## 👤 Author
+## Author
 
 **Abdul Rahman Shaikh**
-- GitHub: [@sabdulrahman](https://github.com/sabdulrahman)
-- LinkedIn: [@iamsabdurahman](https://www.linkedin.com/in/iamsabdurahman/)
-- Email: iamsabdurahman@gmail.com
+- [sabdulrahman.github.io](https://sabdulrahman.github.io/)
+- [GitHub](https://github.com/sabdulrahman)
+- [LinkedIn](https://www.linkedin.com/in/iamsabdurahman/)
+- [Google Scholar](https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en)
+- iamsabdurahman@gmail.com

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Abdul Rahman Shaikh is an AI Researcher and PhD candidate building LLM-powered systems, scalable ML pipelines, and interactive visual analytics.">
-    <meta name="keywords" content="AI, Machine Learning, Data Visualization, PhD, Research, Abdul Rahman Shaikh">
+    <meta name="description" content="Abdul Rahman Shaikh: AI/ML Engineer and PhD candidate building production LLM systems, scalable ML pipelines, and interactive visual analytics. IEEE VIS Best Paper. 9 publications, 90+ citations.">
+    <meta name="keywords" content="AI, Machine Learning, LLM, RAG, Data Visualization, PhD, Research, Abdul Rahman Shaikh">
     <meta name="author" content="Abdul Rahman Shaikh">
     <meta name="theme-color" content="#050505">
     
@@ -13,17 +13,16 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sabdulrahman.github.io/">
-    <meta property="og:title" content="Abdul Rahman Shaikh | AI Researcher & Engineer">
-    <meta property="og:description" content="PhD specializing in AI, machine learning, and data visualization. Building intelligent systems that drive meaningful impact.">
-    <meta name="twitter:image" content="https://sabdulrahman.github.io/assets/images/og-image.png">
+    <meta property="og:title" content="Abdul Rahman Shaikh | AI/ML Engineer & Researcher">
+    <meta property="og:description" content="PhD candidate building production LLM systems and publishing at IEEE VIS & TVCG. 9 papers, 90+ citations, Best Paper award.">
+    <meta property="og:image" content="https://sabdulrahman.github.io/assets/images/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Abdul Rahman Shaikh | AI Researcher & Engineer">
-    <meta name="twitter:description" content="PhD specializing in AI, machine learning, and data visualization.">
-    <meta property="og:image" content="https://sabdulrahman.github.io/assets/images/og-image.png">
+    <meta name="twitter:title" content="Abdul Rahman Shaikh | AI/ML Engineer & Researcher">
+    <meta name="twitter:description" content="PhD candidate building production LLM systems and publishing at IEEE VIS & TVCG.">
+    <meta name="twitter:image" content="https://sabdulrahman.github.io/assets/images/og-image.png">
 
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
@@ -32,15 +31,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">    
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/portfolio.css">
     
-    <title>Abdul Rahman Shaikh | AI Researcher & Engineer</title>
+    <title>Abdul Rahman Shaikh | AI/ML Engineer & Researcher</title>
     
-    <!-- Dependencies -->
+    <!-- Dependencies (load BEFORE custom CSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Custom Styles (AFTER Tailwind so theme overrides win cascade) -->
+    <link rel="stylesheet" href="css/portfolio.css">
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -48,8 +48,8 @@
         "name": "Abdul Rahman Shaikh",
         "url": "https://sabdulrahman.github.io",
         "image": "https://sabdulrahman.github.io/assets/images/profile.png",
-        "jobTitle": "AI Researcher and Engineer",
-        "description": "PhD candidate specializing in AI, machine learning, and data visualization",
+        "jobTitle": "AI/ML Engineer and Researcher",
+        "description": "PhD candidate specializing in LLM systems, multimodal AI, and interactive visual analytics",
         "email": "iamsabdurahman@gmail.com",
         "affiliation": {
           "@type": "Organization",
@@ -59,28 +59,30 @@
           "@type": "Organization",
           "name": "Northern Illinois University"
         },
-        "knowsAbout": ["Machine Learning", "LLMs", "Data Visualization", "RAG Systems", "PyTorch"],
+        "knowsAbout": ["Machine Learning", "LLMs", "RAG Systems", "Multi-Agent AI", "Data Visualization", "PyTorch", "Computer Vision"],
         "sameAs": [
           "https://github.com/sabdulrahman",
           "https://www.linkedin.com/in/iamsabdurahman",
-          "https://scholar.google.com/citations?user=YOUR_ACTUAL_ID"
+          "https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en"
         ]
       }
-      </script>
+    </script>
       
 </head>
 <body>
+    <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');</script>
 
-
+    <!-- Animated Background -->
     <div data-us-project="0WrRbFIPaKoWVkiQWBG0" class="absolute w-full h-full left-0 top-0 -z-10"></div>
     <script type="text/javascript">
       !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
     </script>
 
-
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
     <div class="nav-wrapper">
       <nav class="nav" role="navigation" aria-label="Main navigation">
-          <!-- Mobile: Menu toggle on left -->
           <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" data-menu-toggle>
               <svg class="nav__toggle-icon nav__toggle-icon--menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M3 12h18M3 6h18M3 18h18"/>
@@ -93,19 +95,36 @@
           <a href="#home" class="nav__logo">Abdul Rahman Shaikh</a>
           <div class="nav__links">
               <a href="#home" class="nav__link nav__link--active">Home</a>
-              <a href="#stack" class="nav__link">About</a>
+              <a href="#about" class="nav__link">About</a>
+              <a href="#experience" class="nav__link">Experience</a>
               <a href="#research" class="nav__link">Research</a>
               <a href="#projects" class="nav__link">Projects</a>
               <a href="#contact" class="nav__link">Contact</a>
           </div>
-          <div class="nav__cta-wrapper">
-              <a href="assets/resume.pdf" class="nav__cta" target="_blank" rel="noopener noreferrer">
-                  <span class="nav__cta-text">Download Resume</span>
-              </a>
+          <div class="nav__cta-wrapper" data-doc-dropdown>
+              <button class="nav__cta" aria-expanded="false" aria-haspopup="true">
+                  <span class="nav__cta-text">Download</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" class="nav__cta-chevron"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="nav__doc-dropdown">
+                  <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="nav__doc-option">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                      <span class="nav__doc-label">Resume</span>
+                  </a>
+                  <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" class="nav__doc-option">
+                      <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+                      <span class="nav__doc-label">CV</span>
+                  </a>
+              </div>
               <span class="nav__cta-glow" aria-hidden="true"></span>
           </div>
+
+          <!-- Theme toggle -->
+          <button class="theme-toggle" aria-label="Toggle theme" data-theme-toggle>
+              <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
           
-          <!-- Mobile: Resume icon on right -->
           <a href="assets/resume.pdf" class="nav__mobile-resume" target="_blank" rel="noopener noreferrer" aria-label="Download Resume">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
                   <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
@@ -118,76 +137,68 @@
           <div class="mobile-menu__backdrop"></div>
           <div class="mobile-menu__dropdown">
               <a href="#home" class="mobile-menu__link" data-menu-link>Home</a>
-              <a href="#stack" class="mobile-menu__link" data-menu-link>About</a>
+              <a href="#about" class="mobile-menu__link" data-menu-link>About</a>
+              <a href="#experience" class="mobile-menu__link" data-menu-link>Experience</a>
               <a href="#research" class="mobile-menu__link" data-menu-link>Research</a>
               <a href="#projects" class="mobile-menu__link" data-menu-link>Projects</a>
               <a href="#contact" class="mobile-menu__link" data-menu-link>Contact</a>
+              <div class="mobile-menu__divider"></div>
+              <button class="mobile-menu__link" data-menu-link data-theme-toggle-mobile>
+                  <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                  <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                  <span class="theme-label-dark">Switch to Light</span>
+                  <span class="theme-label-light">Switch to Dark</span>
+              </button>
               <div class="mobile-menu__divider"></div>
               <a href="assets/resume.pdf" class="mobile-menu__link mobile-menu__link--cta" target="_blank" rel="noopener noreferrer" data-menu-link>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
                       <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                   </svg>
-                  Download Resume
+                  Resume
+              </a>
+              <a href="assets/cv.pdf" class="mobile-menu__link mobile-menu__link--cta" target="_blank" rel="noopener noreferrer" data-menu-link>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                  </svg>
+                  CV
               </a>
           </div>
       </div>
-  </div>
+    </div>
 
     <main>
-        <!-- Hero Section with Split Layout -->
+
+        <!-- ============================================
+             1. HERO
+             ============================================ -->
         <section class="hero" id="home">
             <div class="hero__content">
                 <h1 class="hero__name">Abdul<br>Rahman</h1>
+                <p class="hero__tagline">AI/ML Engineer · PhD Candidate · IEEE VIS Best Paper</p>
                 <p class="hero__description">
-                  I build intelligent systems that work in the real world. 
-                  As an AI Researcher & Engineer, I design scalable ML pipelines, 
-                  LLM-powered applications, and visual analytics systems, bridging 
-                  ideas with robust, product-grade execution.
+                    I build production LLM systems and publish the research behind them. 
+                    My work spans RAG pipelines, multi-agent workflows, fine-tuned language models, 
+                    and interactive visual analytics, with 9 peer-reviewed papers, 90+ citations, 
+                    and prior ML infrastructure experience at Amazon.
                 </p>
                 <div class="hero__actions">
-                  <a href="#projects" class="group inline-flex overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(245,158,11,0.2)] rounded-full p-[1px] relative items-center justify-center">
-                    <!-- Spinning Border Beam (Visible on Hover) - Amber color -->
-                    <span class="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#f59e0b_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                    
-                    <!-- Default Static Border -->
-                    <span class="absolute inset-0 rounded-full bg-zinc-800 transition-opacity duration-300 group-hover:opacity-0"></span>
-                    
-                    <!-- 3D Button Surface & Content -->
-                    <span class="flex items-center justify-center gap-2 uppercase transition-colors duration-300 group-hover:text-amber-400 text-xs font-medium text-zinc-400 tracking-widest bg-gradient-to-b from-zinc-800 to-zinc-950 w-full h-full rounded-full py-2.5 px-6 relative shadow-[inset_0_1px_0_rgba(255,255,255,0.3)]">
-                        <span class="relative z-10">View Work</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 transition-transform duration-300 group-hover:translate-x-0.5">
-                            <path d="M5 12h14"></path>
-                            <path d="m12 5 7 7-7 7"></path>
-                        </svg>
-                    </span>
-                </a>
-<a href="#contact" class="get-in-touch-btn group flex overflow-hidden uppercase transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(234,88,12,0.5)] focus:outline-none text-sm font-medium text-white tracking-widest rounded-full py-5 px-12 relative items-center justify-center">
-  <!-- Full Border Beam (Single Beam) -->
-  <div class="absolute inset-0 -z-20 rounded-full overflow-hidden p-[1px]">
-      <div class="beam-spinner absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#ea580c_360deg)]"></div>
-      <div class="absolute inset-[1px] rounded-full bg-black"></div>
-  </div>
-
-  <!-- Inner Background & Effects -->
-  <div class="-z-10 overflow-hidden bg-zinc-950 rounded-full absolute top-[2px] right-[2px] bottom-[2px] left-[2px]">
-      <div class="absolute inset-0 bg-gradient-to-b from-zinc-800/60 to-transparent"></div>
-      <div class="dots-pattern opacity-30 mix-blend-overlay absolute inset-0"></div>
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-orange-500/10 blur-2xl rounded-full pointer-events-none transition-colors duration-500 group-hover:bg-orange-500/30"></div>
-  </div>
-
-  <!-- Content -->
-  <span class="relative z-10 text-white/90 transition-colors group-hover:text-white">Get in Touch</span>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 ml-2 transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-</a>
+                    <a href="#projects" class="hero-btn hero-btn--secondary">
+                        <span>View Work</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                    <a href="#contact" class="hero-btn hero-btn--primary">
+                        <span>Get in Touch</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
                 </div>
             </div>
             
-            <!-- Photo Card with Background Blend -->
+            <!-- Photo Card -->
             <div class="hero__photo-card">
                 <div class="photo-card">
                     <div class="photo-card__glow"></div>
                     <div class="photo-card__image-wrapper">
-                        <img src="assets/images/profile.png" alt="Abdul Rahman Shaikh" class="photo-card__image">
+                        <img src="assets/images/profile.png" alt="Abdul Rahman Shaikh, AI/ML Engineer and Researcher" class="photo-card__image">
                         <div class="photo-card__blend-top"></div>
                         <div class="photo-card__blend-left"></div>
                         <div class="photo-card__blend-right"></div>
@@ -196,1061 +207,789 @@
             </div>
         </section>
 
-<!-- Stack + Code + Timeline -->
-<section id="stack" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4 scroll-mt-24">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      <!-- Skills -->
-      <div class="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4">
-          <div class="flex items-center gap-2">
-              <i data-lucide="sparkles" class="w-4 h-4 text-white/80"></i>
-              <h3 class="text-xl font-semibold tracking-tight">Tech Stack</h3>
-          </div>
-          
-          <div class="mt-3 space-y-4">
-              <div>
-                  <h4 class="text-sm font-medium text-white/80 mb-2">AI & Machine Learning</h4>
-                  <div class="flex flex-wrap gap-2">
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Python</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">PyTorch</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">HuggingFace</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">LangChain</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Scikit-learn</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Keras</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">OpenCV</span>
-                  </div>
-              </div>
-              <div>
-                  <h4 class="text-sm font-medium text-white/80 mb-2">Data & Infrastructure</h4>
-                  <div class="flex flex-wrap gap-2">
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">SQL</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Pandas</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">NumPy</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">AWS</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Docker</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">MLflow</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">PostgreSQL</span>
-                      <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Kubernetes</span>
-                  </div>
-              </div>
-          </div>
-
-          <div class="mt-4 p-3 bg-black/30 rounded-lg border border-white/10">
-              <p class="text-xs text-white/70 leading-relaxed">
-                  <span class="font-medium text-white/80">Focus:</span> RAG pipelines, agentic workflows, model optimization, fine-tuning (LoRA/QLoRA), and production MLOps.
-              </p>
-          </div>
-      </div>
-
-      <!-- Code Snippet -->
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-4 flex flex-col">
-          <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                  <i data-lucide="terminal" class="w-4 h-4 text-white/80"></i>
-                  <h3 class="text-xl font-semibold tracking-tight">Multi-Agent System</h3>
-              </div>
-              <div class="flex items-center gap-2">
-                  <span class="text-[11px] text-white/60">snippet</span>
-                  <a href="https://github.com/sabdulrahman" target="_blank" class="p-1.5 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 hover:border-amber-400/30 transition-colors">
-                      <i data-lucide="github" class="w-3.5 h-3.5 text-white/70 hover:text-amber-400"></i>
-                  </a>
-              </div>
-          </div>
-          <pre class="text-[12px] leading-relaxed overflow-auto text-white/90 bg-black/40 border-white/10 border rounded-xl mt-3 p-3 max-h-[280px] flex-grow" style="font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;"><span style="color: #ff7b72;">from</span> <span style="color: #79c0ff;">langchain.agents</span> <span style="color: #ff7b72;">import</span> <span style="color: #79c0ff;">Tool</span>, <span style="color: #79c0ff;">AgentExecutor</span>
-<span style="color: #ff7b72;">from</span> <span style="color: #79c0ff;">langchain.chat_models</span> <span style="color: #ff7b72;">import</span> <span style="color: #79c0ff;">ChatOpenAI</span>
-<span style="color: #ff7b72;">from</span> <span style="color: #79c0ff;">autogen</span> <span style="color: #ff7b72;">import</span> <span style="color: #79c0ff;">AssistantAgent</span>, <span style="color: #79c0ff;">UserProxyAgent</span>
-
-<span style="color: #8b949e;"># Define specialized agents</span>
-<span style="color: #ffa657;">researcher</span> = <span style="color: #79c0ff;">AssistantAgent</span>(
-  <span style="color: #ffa657;">name</span>=<span style="color: #a5d6ff;">"researcher"</span>,
-  <span style="color: #ffa657;">llm_config</span>={<span style="color: #a5d6ff;">"model"</span>: <span style="color: #a5d6ff;">"gpt-4"</span>, <span style="color: #a5d6ff;">"temperature"</span>: <span style="color: #a5d6ff;">0</span>},
-  <span style="color: #ffa657;">system_message</span>=<span style="color: #a5d6ff;">"You search and extract findings."</span>
-)
-
-<span style="color: #ffa657;">analyst</span> = <span style="color: #79c0ff;">AssistantAgent</span>(
-  <span style="color: #ffa657;">name</span>=<span style="color: #a5d6ff;">"analyst"</span>,
-  <span style="color: #ffa657;">llm_config</span>={<span style="color: #a5d6ff;">"model"</span>: <span style="color: #a5d6ff;">"gpt-4"</span>, <span style="color: #a5d6ff;">"temperature"</span>: <span style="color: #a5d6ff;">0</span>},
-  <span style="color: #ffa657;">system_message</span>=<span style="color: #a5d6ff;">"You synthesize insights."</span>
-)
-
-<span style="color: #8b949e;"># Orchestrate multi-agent workflow</span>
-<span style="color: #ffa657;">coordinator</span> = <span style="color: #79c0ff;">UserProxyAgent</span>(<span style="color: #ffa657;">name</span>=<span style="color: #a5d6ff;">"coord"</span>)
-
-<span style="color: #ff7b72;">def</span> <span style="color: #d2a8ff;">run</span>(<span style="color: #ffa657;">query</span>: <span style="color: #ff7b72;">str</span>) -> <span style="color: #ff7b72;">str</span>:
-  <span style="color: #ffa657;">coordinator</span>.<span style="color: #d2a8ff;">initiate_chat</span>(<span style="color: #ffa657;">researcher</span>, <span style="color: #ffa657;">msg</span>=<span style="color: #ffa657;">query</span>)
-  <span style="color: #ffa657;">findings</span> = <span style="color: #ffa657;">researcher</span>.<span style="color: #d2a8ff;">last_message</span>()
-  <span style="color: #ff7b72;">return</span> <span style="color: #ffa657;">analyst</span>.<span style="color: #d2a8ff;">reply</span>(<span style="color: #ffa657;">findings</span>)</pre>
-      </div>
-
-      <!-- Timeline -->
-      <div class="bg-white/5 border-white/10 border rounded-2xl pt-4 pr-4 pb-4 pl-4">
-          <div class="flex items-center gap-2">
-              <i data-lucide="git-branch" class="w-4 h-4 text-white/80"></i>
-              <h3 class="text-xl font-semibold tracking-tight">Timeline</h3>
-          </div>
-          <ol class="mt-3">
-              <li class="relative pl-6 pb-4 border-l border-white/10">
-                  <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-white"></span>
-                  <p class="text-xs text-white/60">2018 — Present</p>
-                  <p class="text-sm font-medium tracking-tight">Researcher — Northern Illinois University</p>
-                  <p class="text-xs text-white/60 mt-1">Building production ML systems across healthcare, environmental monitoring, and social media. Publishing at IEEE VIS and TVCG.</p>
-              </li>
-              <li class="relative pl-6 pb-4 border-l border-white/10">
-                  <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-white/80"></span>
-                  <p class="text-xs text-white/60">2020 — Present</p>
-                  <p class="text-sm font-medium tracking-tight">Lab Head — NIU VA Lab</p>
-                  <p class="text-xs text-white/60 mt-1">Leading AI-driven visualization research, mentoring 5 graduate students, advancing multi-view exploratory analytics.</p>
-              </li>
-              <li class="relative pl-6 border-l border-white/10">
-                  <span class="absolute left-[-5px] top-1.5 w-2 h-2 rounded-full bg-white/60"></span>
-                  <p class="text-xs text-white/60">2016 — 2017</p>
-                  <p class="text-sm font-medium tracking-tight">Data Analyst — Amazon</p>
-                  <p class="text-xs text-white/60 mt-1">Optimized e-commerce databases by 30%, built data quality workflows validating 500K+ daily records.</p>
-              </li>
-          </ol>
-      </div>
-  </div>
-</section>
-
-<!-- Impact & About -->
-<section id="impact" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4">
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-      <div class="lg:col-span-7 flex flex-col">
-          <h2 class="text-2xl sm:text-3xl tracking-tight">Impact</h2>
-          <p class="text-white/70 mt-2">Production systems and published research with measurable outcomes.</p>
-  
-          <!-- Key Metrics -->
-          <div class="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
-              <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                      <i data-lucide="zap" class="w-4 h-4 text-white/80"></i>
-                      <h3 class="text-base font-semibold tracking-tight">Performance Gains</h3>
-                  </div>
-              </div>
-              
-              <div class="mt-4 grid grid-cols-3 gap-3 text-sm">
-                  <div class="rounded-lg border border-white/10 bg-black/30 p-3">
-                      <div class="text-white/60">Inference</div>
-                      <div class="text-lg font-semibold tracking-tight">4×</div>
-                      <div class="text-xs text-amber-400 mt-1">Throughput</div>
-                  </div>
-                  <div class="rounded-lg border border-white/10 bg-black/30 p-3">
-                      <div class="text-white/60">GPU Memory</div>
-                      <div class="text-lg font-semibold tracking-tight">-60%</div>
-                      <div class="text-xs text-amber-400 mt-1">LoRA tuning</div>
-                  </div>
-                  <div class="rounded-lg border border-white/10 bg-black/30 p-3">
-                      <div class="text-white/60">Training</div>
-                      <div class="text-lg font-semibold tracking-tight">-45%</div>
-                      <div class="text-xs text-amber-400 mt-1">Time reduced</div>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <!-- Scale -->
-              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <div class="flex items-center gap-2 mb-3">
-                      <i data-lucide="database" class="w-4 h-4 text-white/70"></i>
-                      <h4 class="text-sm font-medium tracking-tight">Scale & Systems</h4>
-                  </div>
-                  <div class="space-y-2">
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Records validated daily</span>
-                          <span class="text-xs font-medium">500K+</span>
-                      </div>
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Images processed</span>
-                          <span class="text-xs font-medium">300K+</span>
-                      </div>
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Data accuracy</span>
-                          <span class="text-xs font-medium">91%+</span>
-                      </div>
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Query latency reduced</span>
-                          <span class="text-xs font-medium">30%</span>
-                      </div>
-                  </div>
-              </div>
-      
-              <!-- Research Output -->
-              <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <div class="flex items-center gap-2 mb-3">
-                      <i data-lucide="book-open" class="w-4 h-4 text-white/70"></i>
-                      <h4 class="text-sm font-medium tracking-tight">Research Output</h4>
-                  </div>
-                  <div class="space-y-2">
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Publications</span>
-                          <span class="text-xs font-medium">9 papers</span>
-                      </div>
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Top venues</span>
-                          <span class="text-xs font-medium">IEEE VIS, TVCG</span>
-                      </div>
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Recognition</span>
-                          <span class="text-xs font-medium text-amber-400">Best Paper</span>
-                      </div>
-                      <div class="flex justify-between items-center">
-                          <span class="text-xs text-white/70">Program Committee</span>
-                          <span class="text-xs font-medium">CIKM, JCDL</span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Domains -->
-          <div class="mt-5 rounded-xl border border-white/10 bg-white/5 p-4 flex-grow">
-              <div class="flex items-center justify-between mb-3">
-                  <div class="flex items-center gap-2">
-                      <i data-lucide="layers" class="w-4 h-4 text-white/80"></i>
-                      <h4 class="text-sm font-medium tracking-tight">Domains & Expertise</h4>
-                  </div>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-amber-400/10 border border-amber-400/20 text-amber-400">Healthcare AI</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-amber-400/10 border border-amber-400/20 text-amber-400">FinTech</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-amber-400/10 border border-amber-400/20 text-amber-400">E-commerce</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">RAG Systems</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Multi-Agent LLMs</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">LLM Fine-tuning</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Multimodal AI</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Computer Vision</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">Data Visualization</span>
-                  <span class="px-2.5 py-1 text-xs rounded-md bg-white/10 border border-white/10">HCI</span>
-              </div>
-          </div>
-      </div>
-
-      <!-- About -->
-      <div id="about" class="lg:col-span-5 flex flex-col">
-          <div class="rounded-3xl overflow-hidden border border-white/10 bg-white/[0.03] flex flex-col flex-grow">
-              <div class="relative h-44">
-                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e636d5f8-9fec-44fe-b4dd-4ccb5a90c3da_1600w.jpg" alt="Workspace" class="absolute inset-0 w-full h-full object-cover">
-                  <div class="absolute inset-0 bg-gradient-to-tr from-black/30 via-transparent to-transparent"></div>
-              </div>
-              <div class="p-5 flex flex-col flex-grow">
-                  <h3 class="text-xl font-semibold tracking-tight">About</h3>
-                  <p class="mt-2 text-sm leading-relaxed text-white/70">
-                      AI/ML Engineer finishing a Ph.D. at NIU. I've shipped ML systems at Amazon, won Best Paper at IEEE VIS, and now build LLM infrastructure that scales, from RAG pipelines to multi-agent systems.
-                  </p>
-                  <div class="mt-4 grid grid-cols-3 gap-4">
-                      <div>
-                          <div class="text-2xl tracking-tight">8+</div>
-                          <p class="text-[11px] text-white/60 mt-0.5">Years</p>
-                      </div>
-                      <div>
-                          <div class="text-2xl tracking-tight">9</div>
-                          <p class="text-[11px] text-white/60 mt-0.5">Papers</p>
-                      </div>
-                      <div>
-                          <div class="text-2xl tracking-tight">5</div>
-                          <p class="text-[11px] text-white/60 mt-0.5">Students Mentored</p>
-                        </div>
-                  </div>
-                  <div class="mt-4 p-3 bg-black/30 rounded-xl border border-white/10">
-                      <h4 class="text-xs font-medium tracking-tight text-white/80 mb-1">What I am building</h4>
-                      <p class="text-xs text-white/60">Building LLM systems end-to-end - fine-tuning, architecture optimization, and real-time inference at scale. Currently exploring transformer internals and memory architectures, while my dissertation explores how LLMs can reshape multi-view data exploration.</p>                  <div class="mt-auto pt-4">
-                      <a href="#contact" class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium tracking-tight text-neutral-900 bg-white hover:bg-amber-400 border border-white/10 transition-colors">
-                          <i data-lucide="mail" class="w-4 h-4"></i>
-                          <span>Get in touch</span>
-                      </a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-		
-<section id="research" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4 pb-10">
-  <div class="sticky-wrapper gap-4 md:gap-20 flex flex-col md:flex-row">
-    
-    <!-- Left sticky content - NOT sticky on mobile -->
-    <div class="w-full md:w-1/3 md:sticky md:top-[20vh] md:self-start pb-2 md:pb-20">
-      <h2 class="text-3xl md:text-6xl font-display font-bold leading-[0.9] mb-3 md:mb-8">Research</h2>
-      <p class="text-neutral-400 text-sm md:text-lg leading-relaxed mb-3 md:mb-8">
-        Publications, preprints, and ongoing research in AI, machine learning, and data visualization.
-      </p>
-
-    <!-- Filter pills -->
-    <div class="flex flex-wrap gap-2 mb-0 md:mb-8">
-    <button onclick="filterPapers('selected')" id="filter-selected" class="filter-btn px-3 py-1.5 text-xs rounded-full bg-white text-black font-medium transition-all duration-300">Selected</button>
-    <button onclick="filterPapers('published')" id="filter-published" class="filter-btn px-3 py-1.5 text-xs rounded-full border border-white/20 text-white/60 hover:bg-white/10 transition-all duration-300">
-      Published
-    </button>
-    <button onclick="filterPapers('preprint')" id="filter-preprint" class="filter-btn px-3 py-1.5 text-xs rounded-full border border-white/20 text-white/60 hover:bg-white/10 transition-all duration-300">
-      Preprints
-    </button>
-    </div>
-
-    <!-- Stats - Hidden on mobile, shown on md+ -->
-    <div class="hidden md:grid grid-cols-3 gap-4">
-      <div>
-      <div class="text-3xl font-bold tracking-tight">9</div>
-      <p class="text-xs text-white/50 mt-1">Publications</p>
-    </div>
-    <div>
-      <div class="text-3xl font-bold tracking-tight">90+</div>
-      <p class="text-xs text-white/50 mt-1">Citations</p>
-    </div>
-    <div>
-      <div class="text-3xl font-bold tracking-tight">3</div>
-      <p class="text-xs text-white/50 mt-1">In Review</p>
-    </div>
-    </div>
-  </div>
-
-			<!-- Right scrolling papers -->
-      <div id="papers-container" class="w-full md:w-2/3 flex flex-col gap-4 md:gap-8 md:pt-20">
-			  <!-- Paper 1 - Featured (YouTube and Science) - SELECTED -->
-			  <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
-				<div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-				<div class="relative p-8">
-				  <div class="flex items-center gap-3 mb-4">
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Featured</span>
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">Scientometrics 2023</span>
-				  </div>
-
-				  <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9734683/pdf/11192_2022_Article_4574.pdf"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >
-					YouTube and Science: Models for Research Impact
-					</a>
-				  </h3>
-
-				  <p class="text-sm text-white/40 mb-4">
-					<span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori, M. Sun
-				  </p>
-
-				  <p class="text-sm text-white/50 leading-relaxed mb-6">
-					Investigates the growing number of videos citing scholarly articles, introduces new datasets, and builds ML models to predict citations, popularity, and public engagement using altmetrics signals.
-				  </p>
-
-				  <div class="flex items-center justify-end gap-2">
-					<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9734683/pdf/11192_2022_Article_4574.pdf" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-					  Paper
-					</a>
-					<a href="https://github.com/sabdulrahman/YouTube" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="github" class="w-3.5 h-3.5"></i>
-					  Code
-					</a>
-				  </div>
-				</div>
-			  </div>
-
-			  <!-- Paper 2 (iTrace) - SELECTED -->
-			  <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
-				<div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				<div class="relative p-8">
-				  <div class="flex items-center gap-3 mb-4">
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">Graphics Interface 2025</span>
-				  </div>
-
-				  <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					<a
-						href="https://arxiv.org/pdf/2505.23079"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >
-					iTrace: Interactive Tracing of Cross-View Data Relationships</a>
-				  </h3>
-
-				  <p class="text-sm text-white/40 mb-4">
-					<span class="text-white/70">Abdul Rahman Shaikh</span>, Maoyuan Sun, Xingchen Liu, Hamed Alhoori, David Koop
-				  </p>
-
-				  <p class="text-sm text-white/50 leading-relaxed mb-6">
-					Presents iTrace, an interaction technique that guides attention with smooth focus transitions to make cross-view relationship tracing easier when related items are far apart and visually complex.
-				  </p>
-
-				  <div class="flex items-center justify-end gap-2">
-					<a href="https://arxiv.org/pdf/2505.23079" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-					  Paper
-					</a>
-					<a href="https://github.com/sabdulrahman/iTrace" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="github" class="w-3.5 h-3.5"></i>
-					  Code
-					</a>
-				  </div>
-				</div>
-			  </div>
-
-			  <!-- Paper 3 (Toward systematic design...) - SELECTED -->
-			  <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
-				<div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				<div class="relative p-8">
-				  <div class="flex items-center gap-3 mb-4">
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">IEEE VIS 2022</span>
-				  </div>
-
-				  <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://arxiv.org/pdf/2207.07558"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >					
-					Toward systematic design considerations of organizing multiple views</a>
-				  </h3>
-
-				  <p class="text-sm text-white/40 mb-4">
-					<span class="text-white/70">Abdul Rahman Shaikh</span>, David Koop, Hamed Alhoori, Maoyuan Sun
-				  </p>
-
-				  <p class="text-sm text-white/50 leading-relaxed mb-6">
-					Reviews multiple-view visualization systems and identifies layout considerations grounded in perception and content, explaining how spatial organization affects connecting information across views.
-				  </p>
-
-				  <div class="flex items-center justify-end gap-2">
-					<a href="https://arxiv.org/pdf/2207.07558" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-					  Paper
-					</a>
-				  </div>
-				</div>
-			  </div>
-
-			  <!-- Paper 4 (SightBi) - SELECTED -->
-			  <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
-				<div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				<div class="relative p-8">
-				  <div class="flex items-center gap-3 mb-4">
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">TVCG 2021</span>
-          <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">🏆 Best Paper</span>
-				  </div>
-
-				  <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://arxiv.org/pdf/2108.01044"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >					
-					SightBi: Exploring Cross-View Data Relationships with Biclusters</a>
-				  </h3>
-
-				  <p class="text-sm text-white/40 mb-4">
-					Maoyuan Sun, <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori, Jian Zhao
-				  </p>
-
-				  <p class="text-sm text-white/50 leading-relaxed mb-6">
-					Introduces SightBi, a visual analytics approach that formalizes cross-view relationships as biclusters and creates stand-alone relationship-views to guide exploration and reduce trial-and-error.
-				  </p>
-
-				  <div class="flex items-center justify-end gap-2">
-					<a href="https://arxiv.org/pdf/2108.01044" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-					  Paper
-					</a>
-					<a href="https://github.com/sabdulrahman/SightBi" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="github" class="w-3.5 h-3.5"></i>
-					  Code
-					</a>
-				  </div>
-				</div>
-			  </div>
-
-			  <!-- Paper 5 (Generation, Evaluation, and Explanation...) - SELECTED -->
-			  <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
-				<div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				<div class="relative p-8">
-				  <div class="flex items-center gap-3 mb-4">
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					<span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">JCDL 2025</span>
-				  </div>
-
-				  <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://arxiv.org/pdf/2511.20459"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >
-					Generation, Evaluation, and Explanation of Novelists' Styles with Single-Token Prompts</a>
-				  </h3>
-
-				  <p class="text-sm text-white/40 mb-4">
-					Mosab Rezaei, Mina Rajaei Moghadam, <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori, Reva Freedman
-				  </p>
-
-				  <p class="text-sm text-white/50 leading-relaxed mb-6">
-					A stylometry framework that fine-tunes LLMs with minimal single-token prompts to generate 19th-century novelist styles, and evaluates them using a transformer-based detector plus explainable analyses.
-				  </p>
-
-				  <div class="flex items-center justify-end gap-2">
-					<a href="https://arxiv.org/pdf/2511.20459" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-					  Paper
-					</a>
-					<a href="https://github.com/mosabrezaei/Text-Generation-XAI" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-					  <i data-lucide="github" class="w-3.5 h-3.5"></i>
-					  Code
-					</a>
-				  </div>
-				</div>
-			  </div>
-
-				<!-- Additional Published Papers (shown only when "Published" filter is active) -->
-
-				<!-- Paper 6 - Quantifying the online long-term interest in research -->
-				<div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
-				  <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				  <div class="relative p-8">
-					<div class="flex items-center gap-3 mb-4">
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">Journal of Informetrics 2022</span>
-					</div>
-
-					<h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://www.sciencedirect.com/science/article/abs/pii/S1751157722000402"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >					  
-					  Quantifying the online long-term interest in research</a>
-					</h3>
-
-					<p class="text-sm text-white/40 mb-4">
-					  Murtuza Shahzad, Hamed Alhoori, Reva Freedman, <span class="text-white/70">Abdul Rahman Shaikh</span>
-					</p>
-
-					<p class="text-sm text-white/50 leading-relaxed mb-6">
-					  Analyzes decades of online mentions of scholarly articles across platforms and builds machine learning models to predict long-term public interest using altmetrics and temporal clustering.
-					</p>
-
-					<div class="flex items-center justify-end gap-2">
-					  <a href="https://www.sciencedirect.com/science/article/abs/pii/S1751157722000402" target="_blank" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-						<i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-						Paper
-					  </a>
-					</div>
-				  </div>
-				</div>
-
-				<!-- Paper 7 - Examining the Representation of Youth in US Policy Documents -->
-				<div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
-				  <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				  <div class="relative p-8">
-					<div class="flex items-center gap-3 mb-4">
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">IEEE BigData 2024</span>
-					</div>
-
-					<h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://arxiv.org/abs/2501.07858"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >					  
-					  Examining the Representation of Youth in the US Policy Documents through the Lens of Research</a>
-					</h3>
-
-					<p class="text-sm text-white/40 mb-4">
-					  Miftahul Jannat Mokarrama, <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori
-					</p>
-
-					<p class="text-sm text-white/50 leading-relaxed mb-6">
-					  Studies how youth-focused research is cited in U.S. policy documents using NLP and topic modeling, revealing alignment gaps between academic research themes and policy priorities.
-					</p>
-
-					<div class="flex items-center justify-end gap-2">
-					  <a href="https://arxiv.org/abs/2501.07858" target="_blank" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-						<i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-						Paper
-					  </a>
-					</div>
-				  </div>
-				</div>
-
-				<!-- Paper 8 - Predicting patent citations -->
-				<div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
-				  <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				  <div class="relative p-8">
-					<div class="flex items-center gap-3 mb-4">
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">JCDL 2019</span>
-					</div>
-
-					<h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://ieeexplore.ieee.org/abstract/document/8791120/"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >					  
-					  Predicting patent citations to measure economic impact of scholarly research</a>
-					</h3>
-
-					<p class="text-sm text-white/40 mb-4">
-					  <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori
-					</p>
-
-					<p class="text-sm text-white/50 leading-relaxed mb-6">
-					  Uses social media and altmetrics features to predict patent citations to academic papers, providing a machine learning–based measure of economic impact.
-					</p>
-
-					<div class="flex items-center justify-end gap-2">
-					  <a href="https://ieeexplore.ieee.org/abstract/document/8791120/" target="_blank" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-						<i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-						Paper
-					  </a>
-					</div>
-				  </div>
-				</div>
-
-				<!-- Paper 9 - Master's Thesis -->
-				<div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
-				  <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-				  <div class="relative p-8">
-					<div class="flex items-center gap-3 mb-4">
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-yellow-600/20 text-yellow-500 border border-yellow-600/30">Thesis</span>
-					  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">NIU 2022</span>
-					</div>
-
-					<h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://search.proquest.com/openview/d2f17782f4f4135c177d5656fe062e3e/1"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >					  
-					  Modeling the Broader Impact of Science and Health Using Social Media</a>
-					</h3>
-
-					<p class="text-sm text-white/40 mb-4">
-					  <span class="text-white/70">Abdul Rahman Shaikh</span>
-					</p>
-
-					<p class="text-sm text-white/50 leading-relaxed mb-6">
-					  A comprehensive thesis exploring societal, economic, and health-related impact of science using machine learning, computer vision, patents, videos, and social media data.
-					</p>
-
-					<div class="flex items-center justify-end gap-2">
-					  <a href="https://search.proquest.com/openview/d2f17782f4f4135c177d5656fe062e3e/1" target="_blank" class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2">
-						<i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-						Thesis
-					  </a>
-					</div>
-				  </div>
-				</div>
-
-			  <!-- Preprint Papers (shown only when "Preprints" filter is active) -->
-			<div class="paper-card preprint reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
-			  <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-			  <div class="relative p-8">
-				
-				<div class="flex items-center gap-3 mb-4">
-				  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
-					Preprint
-				  </span>
-				  <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">
-					arXiv 2023
-				  </span>
-				</div>
-
-				<h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
-					  <a
-						href="https://arxiv.org/abs/2306.09812"
-						target="_blank"
-						class="text-white/90 hover:text-white underline-offset-4 hover:underline"
-					  >				  
-				  Boundary Blending: Reconsidering the Design of Multi-View Visualizations</a>
-				</h3>
-
-				<p class="text-sm text-white/40 mb-4">
-				  Maoyuan Sun, <span class="text-white/70">Abdul Rahman Shaikh</span>, Yue Ma, David Koop, Hamed Alhoori
-				</p>
-
-				<p class="text-sm text-white/50 leading-relaxed mb-6">
-				  Examines how boundaries in multi-view visualizations can be blended rather than broken by identifying
-				  data, representation, and semantic boundaries, and by analyzing four design strategies.
-				</p>
-
-				<div class="flex items-center justify-end gap-2">
-				  <a
-					href="https://arxiv.org/abs/2306.09812"
-					target="_blank"
-					class="px-4 py-2 text-xs font-medium rounded-full bg-white/5 border border-white/10 hover:bg-amber-500/20 hover:border-amber-500/40 hover:text-amber-400 transition-all duration-300 flex items-center gap-2"
-				  >
-					<i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-					Preprint
-				  </a>
-				</div>
-
-			  </div>
-			</div>
-
-			  <!-- View All Link -->
-			  <div class="text-center pt-8">
-				<a
-				  href="https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en"
-				  target="_blank"
-				  rel="noopener noreferrer"
-				  class="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors group"
-				>
-				  View all on Google Scholar
-				  <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
-				</a>
-			  </div>
-			</div>
-		  </div>
-		</section>
-        
-        
-    <section id="projects" class="bg-[#050505] border-t border-white/10 pt-10 mt-16 sm:mt-20 scroll-mt-24">
-    
-      <!-- Desktop: Split Layout / Mobile: Stacked -->
-      <div class="flex flex-col lg:flex-row lg:items-stretch">
-          
-          <!-- Left Header Panel -->
-          <div class="lg:w-[320px] xl:w-[380px] flex-shrink-0 px-6 py-8 lg:py-12 lg:pl-12 xl:pl-24 lg:border-r lg:border-white/10 flex flex-col justify-center">
-              <h2 class="text-5xl lg:text-6xl xl:text-7xl font-display font-bold leading-none mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white to-neutral-700">
-                  Open<br />Source
-              </h2>
-              <p class="text-neutral-400 text-base lg:text-lg leading-relaxed mb-6">
-                  Projects, tools, and experiments on GitHub.
-              </p>
-              <a href="https://github.com/sabdulrahman" target="_blank" rel="noopener noreferrer"
-                 class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-sm w-fit">
-                  <i data-lucide="github" class="w-4 h-4"></i>
-                  <span>@sabdulrahman</span>
-              </a>
-          </div>
-  
-          <!-- Right: Scrollable Cards Area -->
-          <div class="flex-1 min-w-0">
-              <div class="projects-scroll-container" id="projectsScroller">
-                  <div class="projects-track" id="projectsTrack">
-  
-                      <!-- Project 1 - LLMFlow -->
-                      <div class="project-card group">
-                          <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-500 h-full flex flex-col">
-                              <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-emerald-900/30 to-blue-900/30 relative flex-shrink-0">
-                                  <img
-                                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop"
-                                      alt="LLMFlow: Summarization of Scholarly Documents"
-                                      class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                                      loading="lazy"
-                                  />
-                                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                  <div class="absolute top-4 right-4 flex gap-2">
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-white/70"></i>
-                                          <span>LLM</span>
-                                      </span>
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-                                          <span>Docs</span>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="p-6 flex flex-col flex-grow">
-                                  <div class="flex items-center gap-2 mb-3 flex-wrap">
-                                      <span class="w-3 h-3 rounded-full bg-[#3572A5]"></span>
-                                      <span class="text-xs text-white/50">Python</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">LangChain</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">FastAPI</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">React</span>
-                                  </div>
-                                  <a href="https://github.com/sabdulrahman/LLMFlow" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
-                                    <h3 class="text-xl font-semibold tracking-tight mb-2">LLMFlow: Summarization of Documents</h3>
-                                  </a>
-                                  <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
-                                      Summarization + Q&A for large-scale scholarly PDFs using Llama/Ollama + DeepSeek/GPT via LangChain.
-                                  </p>
-                                  <a href="https://github.com/sabdulrahman/LLMFlow" target="_blank" rel="noopener noreferrer"
-                                     class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mt-auto">
-                                      <span>View Repository</span>
-                                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Project 2 - Rufus -->
-                      <div class="project-card group">
-                          <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-500 h-full flex flex-col">
-                              <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-cyan-900/30 to-blue-900/30 relative flex-shrink-0">
-                                  <img
-                                      src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop"
-                                      alt="Rufus: Intelligent Web Data Extraction for LLMs"
-                                      class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                                      loading="lazy"
-                                  />
-                                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                  <div class="absolute top-4 right-4 flex gap-2">
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="bot" class="w-3.5 h-3.5 text-white/70"></i>
-                                          <span>RAG</span>
-                                      </span>
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
-                                          <span>Crawl</span>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="p-6 flex flex-col flex-grow">
-                                  <div class="flex items-center gap-2 mb-3 flex-wrap">
-                                      <span class="w-3 h-3 rounded-full bg-[#3572A5]"></span>
-                                      <span class="text-xs text-white/50">Python</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Asyncio</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Selenium</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">RAG</span>
-                                  </div>
-                                  <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
-                                    <h3 class="text-xl font-semibold tracking-tight mb-2">Rufus: Data Extraction for LLMs</h3>
-                                </a>
-                                <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
-                                      AI-powered web crawler that extracts and synthesizes content into structured documents for RAG pipelines.
-                                  </p>
-                                  <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer"
-                                     class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mt-auto">
-                                      <span>View Repository</span>
-                                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Project 3 - ChatFit -->
-                      <div class="project-card group">
-                          <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-500 h-full flex flex-col">
-                              <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-indigo-900/30 to-violet-900/30 relative flex-shrink-0">
-                                  <img
-                                      src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop"
-                                      alt="ChatFit: Personalized Fitness Chatbot"
-                                      class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                                      loading="lazy"
-                                  />
-                                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                  <div class="absolute top-4 right-4 flex gap-2">
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="dumbbell" class="w-3.5 h-3.5 text-white/70"></i>
-                                          <span>Fitness</span>
-                                      </span>
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
-                                          <span>Chatbot</span>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="p-6 flex flex-col flex-grow">
-                                  <div class="flex items-center gap-2 mb-3 flex-wrap">
-                                      <span class="w-3 h-3 rounded-full bg-[#3572A5]"></span>
-                                      <span class="text-xs text-white/50">Python</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">OpenAI GPT</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Streamlit</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Flask</span>
-                                  </div>
-                                  <a href="https://github.com/sabdulrahman/ChatFit" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
-                                    <h3 class="text-xl font-semibold tracking-tight mb-2">ChatFit: Personalized Fitness Chatbot</h3>
-                                </a>
-                                  <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
-                                      Conversational fitness chatbot that generates personalized workout + diet plans based on user goals.
-                                  </p>
-                                  <a href="https://github.com/sabdulrahman/ChatFit" target="_blank" rel="noopener noreferrer"
-                                     class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mt-auto">
-                                      <span>View Repository</span>
-                                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Project 4 - Pexos -->
-                      <div class="project-card group">
-                          <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-500 h-full flex flex-col">
-                              <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-orange-900/30 to-red-900/30 relative flex-shrink-0">
-                                  <img
-                                      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=500&fit=crop"
-                                      alt="Pexos: Safe Python Execution Sandbox"
-                                      class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                                      loading="lazy"
-                                  />
-                                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                  <div class="absolute top-4 right-4 flex gap-2">
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="shield" class="w-3.5 h-3.5 text-white/70"></i>
-                                          <span>Sandbox</span>
-                                      </span>
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="container" class="w-3.5 h-3.5"></i>
-                                          <span>Docker</span>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="p-6 flex flex-col flex-grow">
-                                  <div class="flex items-center gap-2 mb-3 flex-wrap">
-                                      <span class="w-3 h-3 rounded-full bg-[#3572A5]"></span>
-                                      <span class="text-xs text-white/50">Python</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Flask</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">nsjail</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Docker</span>
-                                  </div>
-                                  <a href="https://github.com/sabdulrahman/pexos" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
-                                    <h3 class="text-xl font-semibold tracking-tight mb-2">Pexos: Safe Python Execution Sandbox</h3>
-                                </a>
-                                  <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
-                                      Secure Python execution service for untrusted code with syscall restrictions and resource limits.
-                                  </p>
-                                  <a href="https://github.com/sabdulrahman/pexos" target="_blank" rel="noopener noreferrer"
-                                     class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mt-auto">
-                                      <span>View Repository</span>
-                                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Project 5 - GenHealth -->
-                      <div class="project-card group">
-                          <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-all duration-500 h-full flex flex-col">
-                              <div class="aspect-[16/10] overflow-hidden bg-gradient-to-br from-emerald-900/30 to-cyan-900/30 relative flex-shrink-0">
-                                  <img
-                                      src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=800&h=500&fit=crop"
-                                      alt="GenHealth: Multimodal Medical Report Analysis"
-                                      class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                                      loading="lazy"
-                                  />
-                                  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                  <div class="absolute top-4 right-4 flex gap-2">
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="heart-pulse" class="w-3.5 h-3.5 text-white/70"></i>
-                                          <span>Health AI</span>
-                                      </span>
-                                      <span class="px-3 py-1.5 text-xs font-medium rounded-full bg-black/50 backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
-                                          <i data-lucide="scan" class="w-3.5 h-3.5"></i>
-                                          <span>Multimodal</span>
-                                      </span>
-                                  </div>
-                              </div>
-                              <div class="p-6 flex flex-col flex-grow">
-                                  <div class="flex items-center gap-2 mb-3 flex-wrap">
-                                      <span class="w-3 h-3 rounded-full bg-[#3572A5]"></span>
-                                      <span class="text-xs text-white/50">Python</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">PyTorch</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">Transformers</span>
-                                      <span class="text-white/20">•</span>
-                                      <span class="text-xs text-white/50">FastAPI</span>
-                                  </div>
-                                  <a href="https://github.com/sabdulrahman/GenHealth" target="_blank" rel="noopener noreferrer" class="hover:text-white/80 transition-colors">
-                                    <h3 class="text-xl font-semibold tracking-tight mb-2">GenHealth: Medical Report Analysis</h3>
-                                </a>
-                                  <p class="text-sm text-white/50 leading-relaxed mb-4 flex-grow">
-                                      Multimodal pipeline that fuses clinical text, medical imaging, and structured signals.
-                                  </p>
-                                  <a href="https://github.com/sabdulrahman/GenHealth" target="_blank" rel="noopener noreferrer"
-                                     class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mt-auto">
-                                      <span>View Repository</span>
-                                      <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- End CTA Card -->
-                      <div class="project-card">
-                          <div class="h-full flex flex-col justify-center items-center text-center px-8 rounded-2xl border border-white/10 bg-white/[0.02]">
-                              <div class="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center mb-6 hover:bg-white/10 transition-colors cursor-pointer">
-                                  <i data-lucide="plus" class="w-6 h-6 text-white/50"></i>
-                              </div>
-                              <h3 class="text-xl font-display font-bold mb-3">More on GitHub</h3>
-                              <p class="text-sm text-white/50 mb-6">Explore all repositories</p>
-                              <a href="https://github.com/sabdulrahman?tab=repositories" target="_blank" rel="noopener noreferrer"
-                                 class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-medium text-sm hover:bg-white/90 transition-colors">
-                                  <i data-lucide="github" class="w-4 h-4"></i>
-                                  <span>View All</span>
-                              </a>
-                          </div>
-                      </div>
-  
-                  </div>
-              </div>
-          </div>
-      </div>
-  
-      <!-- Progress Dots - Centered below cards -->
-      <div class="flex justify-center items-center gap-2 py-8" id="projectsDots"></div>
-      
-  </section>
-
-    
-        <!-- Contact / CTA -->
-        <section id="contact" class="max-w-7xl sm:px-6 sm:mt-24 border-t border-white/10 mt-16 mx-auto mb-16 pt-10 px-4">
-            <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-neutral-950 text-white p-6 sm:p-8">
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_-20%,rgba(255,255,255,0.07),transparent_60%)]"></div>
-                    <div class="absolute inset-0 bg-[radial-gradient(1200px_600px_at_80%_120%,rgba(255,255,255,0.06),transparent_60%)]"></div>
-                    <div class="absolute inset-0 bg-[radial-gradient(#ffffff0d_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.15]"></div>
+        <!-- ============================================
+             2. ABOUT
+             ============================================ -->
+        <section id="about" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4 scroll-mt-24">
+
+            <!-- Availability indicator -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                <h2 class="text-2xl sm:text-3xl tracking-tight">About</h2>
+                <a href="#contact" class="status-badge">
+                    <span class="status-badge__dot"></span>
+                    <span class="status-badge__text">Open to AI/ML roles · Available now</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="status-badge__arrow"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+
+            <!-- Stats row, full width -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div class="text-2xl font-semibold tracking-tight">8+</div>
+                    <p class="text-[11px] text-white/50 mt-1">Years in ML</p>
                 </div>
+                <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div class="text-2xl font-semibold tracking-tight">9</div>
+                    <p class="text-[11px] text-white/50 mt-1">Publications</p>
+                </div>
+                <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div class="text-2xl font-semibold tracking-tight">90+</div>
+                    <p class="text-[11px] text-white/50 mt-1">Citations</p>
+                </div>
+                <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                    <div class="text-2xl font-semibold tracking-tight accent-text">Best</div>
+                    <p class="text-[11px] text-white/50 mt-1">Paper · IEEE VIS</p>
+                </div>
+            </div>
+
+            <!-- Two-column: Bio + Education | Skills -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                <!-- Left: Bio + Education -->
+                <div class="lg:col-span-7 flex flex-col gap-6">
+                    <div class="text-sm text-white/70 leading-relaxed space-y-3 max-w-2xl">
+                        <p>
+                            AI/ML engineer and researcher completing a PhD in Computer Science at 
+                            Northern Illinois University (GPA 3.9). My research spans large language models, 
+                            multimodal learning, and interactive visual analytics, with publications at 
+                            IEEE VIS, TVCG, JCDL, and Scientometrics.
+                        </p>
+                        <p>
+                            Before my PhD, I built data pipelines at Amazon that reduced query latency by 30% 
+                            across 500K+ daily records. At NIU, I lead the Visual Analytics Lab and build 
+                            production systems, from RAG pipelines and multi-agent workflows to computer 
+                            vision with ViT and SAM. Currently exploring how LLMs can reshape multi-view 
+                            data exploration.
+                        </p>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="rounded-xl border border-white/10 bg-white/5 p-5 flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i data-lucide="graduation-cap" class="w-4 h-4 text-white/70"></i>
+                            <h3 class="text-sm font-medium tracking-tight">Education</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-sm font-medium">Ph.D. Computer Science</p>
+                                    <p class="text-xs text-white/50">Northern Illinois University</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-white/50">2020 – Present</p>
+                                    <p class="text-xs font-medium accent-text">GPA 3.9</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-sm font-medium">M.S. Computer Science</p>
+                                    <p class="text-xs text-white/50">Northern Illinois University</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-white/50">2018 – 2020</p>
+                                    <p class="text-xs font-medium accent-text">GPA 3.9</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <p class="text-sm font-medium">B.E. Computer Science</p>
+                                    <p class="text-xs text-white/50">Osmania University, Hyderabad</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-xs text-white/50">2013 – 2017</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Skills -->
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5 h-full">
+                        <div class="flex items-center gap-2 mb-4">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-white/80"></i>
+                            <h3 class="text-sm font-medium tracking-tight">Core Stack</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-xs font-medium text-white/40 uppercase tracking-wider mb-1.5">ML & Data Science</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">HuggingFace</span>
+                                    <span class="skill-tag">Scikit-learn</span>
+                                    <span class="skill-tag">XGBoost</span>
+                                    <span class="skill-tag">LoRA/QLoRA</span>
+                                    <span class="skill-tag">CLIP</span>
+                                    <span class="skill-tag">SHAP/LIME</span>
+                                    <span class="skill-tag">OpenCV</span>
+                                    <span class="skill-tag">A/B Testing</span>
+                                    <span class="skill-tag">Feature Engineering</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-medium text-white/40 uppercase tracking-wider mb-1.5">LLM / GenAI</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="skill-tag">LangChain</span>
+                                    <span class="skill-tag">LangGraph</span>
+                                    <span class="skill-tag">AutoGen</span>
+                                    <span class="skill-tag">CrewAI</span>
+                                    <span class="skill-tag">FAISS</span>
+                                    <span class="skill-tag">RAG</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-medium text-white/40 uppercase tracking-wider mb-1.5">Data & Infrastructure</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">Snowflake</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">FastAPI</span>
+                                    <span class="skill-tag">MLflow</span>
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Kafka</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-medium text-white/40 uppercase tracking-wider mb-1.5">Languages & Visualization</h4>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">R</span>
+                                    <span class="skill-tag">C/C++</span>
+                                    <span class="skill-tag">Pandas</span>
+                                    <span class="skill-tag">NumPy</span>
+                                    <span class="skill-tag">D3.js</span>
+                                    <span class="skill-tag">Tableau</span>
+                                    <span class="skill-tag">Streamlit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             3. EXPERIENCE
+             ============================================ -->
+        <section id="experience" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4 scroll-mt-24">
+            <h2 class="text-2xl sm:text-3xl tracking-tight mb-2">Experience</h2>
+            <p class="text-sm mt-1 mb-8" style="color: var(--color-text-secondary)">Research and industry, with measurable outcomes.</p>
+
+            <div class="exp-cards">
+
+                <!-- NIU Researcher -->
+                <div class="exp-card">
+                    <div>
+                        <span class="exp-card__date">2018 – Present</span>
+                        <span class="exp-card__location">DeKalb, IL</span>
+                    </div>
+                    <div class="exp-card__main">
+                        <h3 class="exp-card__title">Researcher</h3>
+                        <p class="exp-card__org">Northern Illinois University · DATA Lab, VA Lab & WASTE Lab</p>
+                        <p class="exp-card__desc">Built LLM-powered pipelines, multi-agent workflows, and computer vision systems across 3 labs. Fine-tuned LLMs with LoRA (−60% GPU memory, −45% training time). Published 9 papers at IEEE VIS, TVCG, JCDL.</p>
+                    </div>
+                    <div class="exp-card__aside">
+                        <span class="exp-card__tag">4× inference</span>
+                        <span class="exp-card__tag">−60% GPU</span>
+                        <span class="exp-card__tag">−45% training</span>
+                        <span class="exp-card__tag">300K+ images</span>
+                    </div>
+                </div>
+
+                <!-- Lab Head -->
+                <div class="exp-card">
+                    <div>
+                        <span class="exp-card__date">2020 – Present</span>
+                        <span class="exp-card__location">DeKalb, IL</span>
+                    </div>
+                    <div class="exp-card__main">
+                        <h3 class="exp-card__title">Lab Head, Visual Analytics Lab</h3>
+                        <p class="exp-card__org">Northern Illinois University</p>
+                        <p class="exp-card__desc">Leading AI-driven visualization research. Mentored 5 grad students (100% completion, 4 co-authored papers). PC member: CIKM, WWW, JCDL.</p>
+                    </div>
+                    <div class="exp-card__aside">
+                        <span class="exp-card__tag">5 mentored</span>
+                        <span class="exp-card__tag">4 papers</span>
+                        <span class="exp-card__tech">LLMs · D3.js · User Studies</span>
+                    </div>
+                </div>
+
+                <!-- Amazon -->
+                <div class="exp-card">
+                    <div>
+                        <span class="exp-card__date">2016 – 2017</span>
+                        <span class="exp-card__location">Hyderabad, India</span>
+                    </div>
+                    <div class="exp-card__main">
+                        <h3 class="exp-card__title">Data Analyst</h3>
+                        <p class="exp-card__org">Amazon</p>
+                        <p class="exp-card__desc">SQL/MongoDB pipelines that cut query latency by 30%. Built data quality workflows validating 500K+ daily records across e-commerce datasets.</p>
+                    </div>
+                    <div class="exp-card__aside">
+                        <span class="exp-card__tag">−30% latency</span>
+                        <span class="exp-card__tag">500K+ daily</span>
+                        <span class="exp-card__tech">SQL · Python · Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Teaching -->
+                <div class="exp-card">
+                    <div>
+                        <span class="exp-card__date">2018 – 2023</span>
+                        <span class="exp-card__location">DeKalb, IL</span>
+                    </div>
+                    <div class="exp-card__main">
+                        <h3 class="exp-card__title">Teaching Assistant</h3>
+                        <p class="exp-card__org">Northern Illinois University · Algorithms, Databases, C/C++, Java</p>
+                        <p class="exp-card__desc">Supported 70+ students across core CS courses; 20% improvement in class performance.</p>
+                    </div>
+                    <div class="exp-card__aside">
+                        <span class="exp-card__tag">70+ students</span>
+                        <span class="exp-card__tag">+20% perf</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================
+             4. RESEARCH
+             ============================================ -->
+        <section id="research" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4 pb-10 scroll-mt-24">
+            <div class="sticky-wrapper gap-4 md:gap-20 flex flex-col md:flex-row">
+            
+                <!-- Left sticky content -->
+                <div class="w-full md:w-1/3 md:sticky md:top-[20vh] md:self-start pb-2 md:pb-20">
+                    <h2 class="text-3xl md:text-6xl font-display font-bold leading-[0.9] mb-3 md:mb-8">Research</h2>
+                    <p class="text-neutral-400 text-sm md:text-lg leading-relaxed mb-3 md:mb-8">
+                        Peer-reviewed work in AI, LLMs, data visualization, and scientometrics.
+                    </p>
+
+                    <!-- Filter pills -->
+                    <div class="flex flex-wrap gap-2 mb-0 md:mb-8">
+                        <button id="filter-selected" class="filter-btn filter-btn--active px-3 py-1.5 text-xs rounded-full font-medium transition-all duration-300" aria-pressed="true" data-filter="selected">Selected</button>
+                        <button id="filter-published" class="filter-btn filter-btn--inactive px-3 py-1.5 text-xs rounded-full transition-all duration-300" aria-pressed="false" data-filter="published">Published</button>
+                        <button id="filter-preprint" class="filter-btn filter-btn--inactive px-3 py-1.5 text-xs rounded-full transition-all duration-300" aria-pressed="false" data-filter="preprint">Preprints</button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="hidden md:grid grid-cols-3 gap-4">
+                        <div>
+                            <div class="text-3xl font-bold tracking-tight">9</div>
+                            <p class="text-xs text-white/50 mt-1">Publications</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold tracking-tight">90+</div>
+                            <p class="text-xs text-white/50 mt-1">Citations</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold tracking-tight">3</div>
+                            <p class="text-xs text-white/50 mt-1">In Review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right scrolling papers -->
+                <div id="papers-container" class="w-full md:w-2/3 flex flex-col gap-4 md:gap-8 md:pt-20">
+
+                    <!-- Paper 1: YouTube and Science, SELECTED + PUBLISHED -->
+                    <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Featured</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">Scientometrics 2023</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9734683/pdf/11192_2022_Article_4574.pdf" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">YouTube and Science: Models for Research Impact</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4"><span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori, M. Sun</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">
+                                Can YouTube videos predict a paper's real-world influence? This work introduces new datasets linking video content to scholarly articles and trains ML models that forecast citation counts and public engagement using altmetrics signals, measuring scientific impact beyond academia.
+                            </p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9734683/pdf/11192_2022_Article_4574.pdf" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                                <a href="https://github.com/sabdulrahman/YouTube" class="paper-link"><i data-lucide="github" class="w-3.5 h-3.5"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 2: iTrace, SELECTED + PUBLISHED -->
+                    <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">Graphics Interface 2025</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://arxiv.org/pdf/2505.23079" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">iTrace: Interactive Tracing of Cross-View Data Relationships</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4"><span class="text-white/70">Abdul Rahman Shaikh</span>, Maoyuan Sun, Xingchen Liu, Hamed Alhoori, David Koop</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">
+                                When dashboards have many linked views, finding connections between distant data points is hard. iTrace introduces smooth focus transitions that guide attention across views, making cross-view relationship tracing faster and less error-prone.
+                            </p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://arxiv.org/pdf/2505.23079" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                                <a href="https://github.com/sabdulrahman/iTrace" class="paper-link"><i data-lucide="github" class="w-3.5 h-3.5"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 3: Systematic Design, SELECTED + PUBLISHED -->
+                    <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">IEEE VIS 2022</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://arxiv.org/pdf/2207.07558" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Toward systematic design considerations of organizing multiple views</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4"><span class="text-white/70">Abdul Rahman Shaikh</span>, David Koop, Hamed Alhoori, Maoyuan Sun</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">
+                                How should multiple visualization panels be arranged? This paper reviews dozens of multi-view systems and distills layout principles grounded in perception and content, providing a framework for designing dashboards that help users connect information across views.
+                            </p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://arxiv.org/pdf/2207.07558" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 4: SightBi, SELECTED + PUBLISHED (Best Paper) -->
+                    <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">TVCG 2021</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">Best Paper</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://arxiv.org/pdf/2108.01044" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">SightBi: Exploring Cross-View Data Relationships with Biclusters</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4">Maoyuan Sun, <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori, Jian Zhao</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">
+                                Exploring linked data across views usually involves tedious trial-and-error. SightBi formalizes cross-view relationships as biclusters and creates dedicated relationship-views that surface hidden connections, turning guesswork into guided exploration. Awarded Best Paper Honorable Mention at IEEE VIS 2021.
+                            </p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://arxiv.org/pdf/2108.01044" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                                <a href="https://github.com/sabdulrahman/SightBi" class="paper-link"><i data-lucide="github" class="w-3.5 h-3.5"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 5: Novelists' Styles, SELECTED + PUBLISHED -->
+                    <div class="paper-card selected published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">JCDL 2025</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://arxiv.org/pdf/2511.20459" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Generation, Evaluation, and Explanation of Novelists' Styles with Single-Token Prompts</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4">Mosab Rezaei, Mina Rajaei Moghadam, <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori, Reva Freedman</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">
+                                Can you teach an LLM a novelist's writing style with a single token? This work fine-tunes language models to generate 19th-century literary styles using minimal prompts, then evaluates the output with a transformer-based detector and explainable AI analyses.
+                            </p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://arxiv.org/pdf/2511.20459" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                                <a href="https://github.com/mosabrezaei/Text-Generation-XAI" class="paper-link"><i data-lucide="github" class="w-3.5 h-3.5"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 6: Long-term interest, PUBLISHED only -->
+                    <div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">Journal of Informetrics 2022</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1751157722000402" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Quantifying the online long-term interest in research</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4">Murtuza Shahzad, Hamed Alhoori, Reva Freedman, <span class="text-white/70">Abdul Rahman Shaikh</span></p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">Do some papers stay relevant for decades online while others fade? This study analyzes years of online mentions across platforms and builds ML models that predict which research will sustain public interest over time.</p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1751157722000402" target="_blank" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 7: Youth in Policy, PUBLISHED only -->
+                    <div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">IEEE BigData 2024</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://arxiv.org/abs/2501.07858" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Examining the Representation of Youth in the US Policy Documents through the Lens of Research</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4">Miftahul Jannat Mokarrama, <span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">Are policymakers listening to youth-focused research? This NLP study examines how academic work about young people is cited in U.S. policy documents, revealing gaps between what researchers study and what policies prioritize.</p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://arxiv.org/abs/2501.07858" target="_blank" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 8: Patent Citations, PUBLISHED only -->
+                    <div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30">Published</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">JCDL 2019</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8791120/" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Predicting patent citations to measure economic impact of scholarly research</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4"><span class="text-white/70">Abdul Rahman Shaikh</span>, Hamed Alhoori</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">How do you measure if a paper matters to industry? This work uses social media and altmetrics features to predict which academic papers will be cited by patents, providing an ML-based proxy for economic impact.</p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8791120/" target="_blank" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paper 9: Master's Thesis, PUBLISHED only -->
+                    <div class="paper-card published reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-yellow-600/20 text-yellow-500 border border-yellow-600/30">Thesis</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">NIU 2022</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://search.proquest.com/openview/d2f17782f4f4135c177d5656fe062e3e/1" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Modeling the Broader Impact of Science and Health Using Social Media</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4"><span class="text-white/70">Abdul Rahman Shaikh</span></p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">Master's thesis exploring how ML, computer vision, patent data, and social media can measure the societal, economic, and health-related impact of scientific research.</p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://search.proquest.com/openview/d2f17782f4f4135c177d5656fe062e3e/1" target="_blank" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Thesis</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preprint: Boundary Blending -->
+                    <div class="paper-card preprint reveal-item fade-scale group relative bg-white/[0.02] border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-500 hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative p-8">
+                            <div class="flex items-center gap-3 mb-4 flex-wrap">
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-green-500/20 text-green-400 border border-green-500/30">Preprint</span>
+                                <span class="px-2.5 py-1 text-[10px] font-medium rounded-full bg-white/5 text-white/50">arXiv 2023</span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-semibold tracking-tight mb-3 group-hover:text-amber-400 transition-colors">
+                                <a href="https://arxiv.org/abs/2306.09812" target="_blank" class="text-white/90 hover:text-white underline-offset-4 hover:underline">Boundary Blending: Reconsidering the Design of Multi-View Visualizations</a>
+                            </h3>
+                            <p class="text-sm text-white/40 mb-4">Maoyuan Sun, <span class="text-white/70">Abdul Rahman Shaikh</span>, Yue Ma, David Koop, Hamed Alhoori</p>
+                            <p class="text-sm text-white/50 leading-relaxed mb-6">Should visualization panels have hard edges? This work identifies three types of view boundaries (data, representation, and semantic) and analyzes four design strategies for blending them to create more fluid multi-view experiences.</p>
+                            <div class="flex items-center justify-end gap-2">
+                                <a href="https://arxiv.org/abs/2306.09812" target="_blank" class="paper-link"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Preprint</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View All -->
+                    <div class="text-center pt-8">
+                        <a href="https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors group/link">
+                            View all on Google Scholar
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             5. PROJECTS
+             ============================================ -->
+        <section id="projects" class="max-w-7xl sm:px-6 sm:mt-20 border-t border-white/10 mt-16 mx-auto pt-10 px-4 pb-10 scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl tracking-tight">Projects</h2>
+                    <p class="text-white/50 text-sm mt-2">Open-source tools, systems, and experiments.</p>
+                </div>
+                <a href="https://github.com/sabdulrahman" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-sm w-fit">
+                    <i data-lucide="github" class="w-4 h-4"></i>
+                    <span>@sabdulrahman</span>
+                </a>
+            </div>
+
+            <!-- Project Grid (2-col on desktop, text-only cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                <!-- Project: LLMFlow -->
+                <div class="project-card-text group" data-accent="llm">
+                    <div class="project-card-text__inner">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="file-search" class="w-4 h-4 text-white/30 group-hover:text-[var(--card-accent)] transition-colors"></i>
+                                <div class="flex gap-1.5">
+                                    <span class="project-tag">LLM</span>
+                                    <span class="project-tag">RAG</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/sabdulrahman/LLMFlow" target="_blank" rel="noopener noreferrer" class="project-card-text__github" aria-label="View LLMFlow on GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <a href="https://github.com/sabdulrahman/LLMFlow" target="_blank" rel="noopener noreferrer">
+                            <h3 class="text-base font-semibold tracking-tight mb-2 group-hover:text-[var(--card-accent)] transition-colors">LLMFlow: Scholarly Document Summarization & QA</h3>
+                        </a>
+                        <p class="text-sm text-white/50 leading-relaxed mb-4">
+                            End-to-end pipeline that chunks scholarly PDFs, generates hierarchical summaries via Llama/Ollama and GPT, and supports multi-turn Q&A with source attribution. Reduced reading time for 30+ page papers by ~60%.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-2 text-[11px] text-white/35">
+                                <span class="w-2 h-2 rounded-full bg-[#3572A5]"></span>Python · LangChain · FastAPI · React
+                            </div>
+                            <a href="https://github.com/sabdulrahman/LLMFlow" target="_blank" rel="noopener noreferrer" class="text-[11px] text-white/40 hover:text-white transition-colors flex items-center gap-1">
+                                Code <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Rufus -->
+                <div class="project-card-text group" data-accent="llm">
+                    <div class="project-card-text__inner">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="globe" class="w-4 h-4 text-white/30 group-hover:text-[var(--card-accent)] transition-colors"></i>
+                                <div class="flex gap-1.5">
+                                    <span class="project-tag">RAG</span>
+                                    <span class="project-tag">Crawl</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer" class="project-card-text__github" aria-label="View Rufus on GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer">
+                            <h3 class="text-base font-semibold tracking-tight mb-2 group-hover:text-[var(--card-accent)] transition-colors">Rufus: Intelligent Web Data Extraction for LLMs</h3>
+                        </a>
+                        <p class="text-sm text-white/50 leading-relaxed mb-4">
+                            AI-powered web crawler that navigates sites, extracts relevant content, and synthesizes it into structured documents optimized for RAG ingestion. Handles JS-rendered pages via async Selenium.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-2 text-[11px] text-white/35">
+                                <span class="w-2 h-2 rounded-full bg-[#3572A5]"></span>Python · Asyncio · Selenium · RAG
+                            </div>
+                            <a href="https://github.com/sabdulrahman/rufus" target="_blank" rel="noopener noreferrer" class="text-[11px] text-white/40 hover:text-white transition-colors flex items-center gap-1">
+                                Code <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: GenHealth -->
+                <div class="project-card-text group" data-accent="health">
+                    <div class="project-card-text__inner">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="heart-pulse" class="w-4 h-4 text-white/30 group-hover:text-[var(--card-accent)] transition-colors"></i>
+                                <div class="flex gap-1.5">
+                                    <span class="project-tag">Health AI</span>
+                                    <span class="project-tag">Multimodal</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/sabdulrahman/GenHealth" target="_blank" rel="noopener noreferrer" class="project-card-text__github" aria-label="View GenHealth on GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <a href="https://github.com/sabdulrahman/GenHealth" target="_blank" rel="noopener noreferrer">
+                            <h3 class="text-base font-semibold tracking-tight mb-2 group-hover:text-[var(--card-accent)] transition-colors">GenHealth: Multimodal Medical Report Analysis</h3>
+                        </a>
+                        <p class="text-sm text-white/50 leading-relaxed mb-4">
+                            Multimodal AI system that fuses clinical text, medical imaging, and structured signals to boost diagnostic extraction accuracy. Combines transformer encoders with domain-specific preprocessing.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-2 text-[11px] text-white/35">
+                                <span class="w-2 h-2 rounded-full bg-[#3572A5]"></span>Python · PyTorch · Transformers · FastAPI
+                            </div>
+                            <a href="https://github.com/sabdulrahman/GenHealth" target="_blank" rel="noopener noreferrer" class="text-[11px] text-white/40 hover:text-white transition-colors flex items-center gap-1">
+                                Code <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Pexos -->
+                <div class="project-card-text group" data-accent="infra">
+                    <div class="project-card-text__inner">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="shield" class="w-4 h-4 text-white/30 group-hover:text-[var(--card-accent)] transition-colors"></i>
+                                <div class="flex gap-1.5">
+                                    <span class="project-tag">Sandbox</span>
+                                    <span class="project-tag">Docker</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/sabdulrahman/pexos" target="_blank" rel="noopener noreferrer" class="project-card-text__github" aria-label="View Pexos on GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <a href="https://github.com/sabdulrahman/pexos" target="_blank" rel="noopener noreferrer">
+                            <h3 class="text-base font-semibold tracking-tight mb-2 group-hover:text-[var(--card-accent)] transition-colors">Pexos: Safe Python Execution Sandbox</h3>
+                        </a>
+                        <p class="text-sm text-white/50 leading-relaxed mb-4">
+                            Secure code execution service for running untrusted Python with syscall restrictions, resource limits, and network isolation. Built for safe LLM code generation evaluation.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-2 text-[11px] text-white/35">
+                                <span class="w-2 h-2 rounded-full bg-[#3572A5]"></span>Python · Flask · nsjail · Docker
+                            </div>
+                            <a href="https://github.com/sabdulrahman/pexos" target="_blank" rel="noopener noreferrer" class="text-[11px] text-white/40 hover:text-white transition-colors flex items-center gap-1">
+                                Code <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: ChatFit -->
+                <div class="project-card-text group" data-accent="llm">
+                    <div class="project-card-text__inner">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="message-square" class="w-4 h-4 text-white/30 group-hover:text-[var(--card-accent)] transition-colors"></i>
+                                <div class="flex gap-1.5">
+                                    <span class="project-tag">Chatbot</span>
+                                    <span class="project-tag">GPT</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/sabdulrahman/ChatFit" target="_blank" rel="noopener noreferrer" class="project-card-text__github" aria-label="View ChatFit on GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <a href="https://github.com/sabdulrahman/ChatFit" target="_blank" rel="noopener noreferrer">
+                            <h3 class="text-base font-semibold tracking-tight mb-2 group-hover:text-[var(--card-accent)] transition-colors">ChatFit: Personalized Fitness Chatbot</h3>
+                        </a>
+                        <p class="text-sm text-white/50 leading-relaxed mb-4">
+                            Conversational fitness assistant that collects user goals through dialogue and generates personalized workout and diet plans using GPT with structured output parsing.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-2 text-[11px] text-white/35">
+                                <span class="w-2 h-2 rounded-full bg-[#3572A5]"></span>Python · OpenAI GPT · Streamlit · Flask
+                            </div>
+                            <a href="https://github.com/sabdulrahman/ChatFit" target="_blank" rel="noopener noreferrer" class="text-[11px] text-white/40 hover:text-white transition-colors flex items-center gap-1">
+                                Code <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: VoxCore -->
+                <div class="project-card-text group" data-accent="cv">
+                    <div class="project-card-text__inner">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="mic" class="w-4 h-4 text-white/30 group-hover:text-[var(--card-accent)] transition-colors"></i>
+                                <div class="flex gap-1.5">
+                                    <span class="project-tag">Audio</span>
+                                    <span class="project-tag">Auth</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/sabdulrahman" target="_blank" rel="noopener noreferrer" class="project-card-text__github" aria-label="View VoxCore on GitHub">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <a href="https://github.com/sabdulrahman" target="_blank" rel="noopener noreferrer">
+                            <h3 class="text-base font-semibold tracking-tight mb-2 group-hover:text-[var(--card-accent)] transition-colors">VoxCore: Voice Authentication System</h3>
+                        </a>
+                        <p class="text-sm text-white/50 leading-relaxed mb-4">
+                            Voice authentication using OpenAI Whisper for transcription and custom PyTorch models for speaker verification. Achieves 89% accuracy in multi-speaker environments with real-time processing.
+                        </p>
+                        <div class="flex items-center justify-between mt-auto">
+                            <div class="flex items-center gap-2 text-[11px] text-white/35">
+                                <span class="w-2 h-2 rounded-full bg-[#3572A5]"></span>Python · Whisper · PyTorch
+                            </div>
+                            <a href="https://github.com/sabdulrahman" target="_blank" rel="noopener noreferrer" class="text-[11px] text-white/40 hover:text-white transition-colors flex items-center gap-1">
+                                Code <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- More on GitHub -->
+            <div class="text-center mt-8">
+                <a href="https://github.com/sabdulrahman?tab=repositories" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+                    View all repositories on GitHub
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============================================
+             6. CONTACT
+             ============================================ -->
+        <section id="contact" class="max-w-7xl sm:px-6 sm:mt-24 border-t border-white/10 mt-16 mx-auto mb-16 pt-10 px-4 scroll-mt-24">
+            <div class="contact-card relative overflow-hidden rounded-3xl border border-white/10 p-6 sm:p-8">
+                <div class="contact-card__bg absolute inset-0 pointer-events-none"></div>
         
                 <div class="relative">
                     <h2 class="text-[14vw] sm:text-[10vw] lg:text-[7vw] leading-[0.9] font-semibold tracking-tight">
-                        Lets build with <span class="text-amber/70">AI.</span>
+                        Let's build with <span class="accent-text">AI.</span>
                     </h2>
         
                     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 md:divide-x md:divide-white/10">
                         <div>
-                            <p class="text-sm text-white/70">Email</p>
+                            <p class="text-sm text-white/50">Email</p>
                             <a href="mailto:iamsabdurahman@gmail.com" class="mt-2 inline-flex items-center gap-2 text-base sm:text-2xl font-medium tracking-tight whitespace-nowrap">
                                 <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"></i>
                                 <span class="__cf_email__" data-cfemail="iamsabdurahman@gmail.com">iamsabdurahman@gmail.com</span>
                             </a>
                         </div>
                         <div class="md:pl-8">
-                            <p class="text-sm text-white/70">Schedule</p>
-                            <a href="https://calendly.com/iamsabdurahman/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight text-neutral-900 bg-white hover:bg-amber-400 border border-white/10 mt-2 transition-colors">
-                              <i data-lucide="calendar" class="w-4 h-4"></i>
-                              <span>Book a call</span>
-                          </a>
+                            <p class="text-sm text-white/50">Schedule</p>
+                            <a href="https://calendly.com/iamsabdurahman/30min" target="_blank" rel="noopener noreferrer" class="contact-cta-btn inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium tracking-tight mt-2 transition-colors">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span>Book a call</span>
+                            </a>
                         </div>
                         <div class="md:pl-8">
-                            <p class="text-sm text-white/70">Social</p>
+                            <p class="text-sm text-white/50">Social</p>
                             <div class="flex flex-wrap gap-3 mt-2">
-                                <a href="https://x.com/imsabdurahman" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-neutral-900 border border-white/10 hover:bg-amber-400 transition-colors">
+                                <a href="https://x.com/imsabdurahman" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Twitter/X">
                                     <i data-lucide="twitter" class="w-4 h-4"></i>
                                 </a>
-                                <a href="https://github.com/sabdulrahman" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-neutral-900 border border-white/10 hover:bg-amber-400 transition-colors">
+                                <a href="https://github.com/sabdulrahman" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="GitHub">
                                     <i data-lucide="github" class="w-4 h-4"></i>
                                 </a>
-                                <a href="https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-neutral-900 border border-white/10 hover:bg-amber-400 transition-colors">
-                                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                                      <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-                                  </svg>
-                               </a>
-                                <a href="https://www.linkedin.com/in/iamsabdurahman/" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white text-neutral-900 border border-white/10 hover:bg-amber-400 transition-colors">
+                                <a href="https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Google Scholar">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/iamsabdurahman/" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="LinkedIn">
                                     <i data-lucide="linkedin" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
         
-                    <p class="text-[11px] text-white/60 text-center mt-6">© Abdul Rahman Shaikh <span id="year">2025</span> — Available for freelance & contracts</p>
+                    <p class="text-[11px] text-white/50 text-center mt-6">&copy; Abdul Rahman Shaikh <span id="year">2025</span> · Open to full-time AI/ML roles &amp; research collaboration</p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Social Sidebar -->
     <aside class="social" aria-label="Social media links">
         <div class="social__link-wrapper">
             <a href="https://github.com/sabdulrahman" class="social__link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
@@ -1258,9 +997,7 @@
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
             </a>
-            <div class="social__text-container">
-                <span>GitHub</span>
-            </div>
+            <div class="social__text-container"><span>GitHub</span></div>
         </div>
         <div class="social__link-wrapper">
             <a href="https://www.linkedin.com/in/iamsabdurahman/" class="social__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
@@ -1268,9 +1005,7 @@
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
             </a>
-            <div class="social__text-container">
-                <span>LinkedIn</span>
-            </div>
+            <div class="social__text-container"><span>LinkedIn</span></div>
         </div>
         <div class="social__link-wrapper">
             <a href="https://scholar.google.com/citations?user=3nfm1N8AAAAJ&hl=en" class="social__link" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile">
@@ -1278,9 +1013,7 @@
                     <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
                 </svg>
             </a>
-            <div class="social__text-container">
-                <span>Scholar</span>
-            </div>
+            <div class="social__text-container"><span>Scholar</span></div>
         </div>
         <div class="social__link-wrapper">
             <a href="mailto:iamsabdurahman@gmail.com" class="social__link" aria-label="Send Email">
@@ -1289,9 +1022,7 @@
                     <path d="M22 6l-10 7L2 6"/>
                 </svg>
             </a>
-            <div class="social__text-container">
-                <span>Email</span>
-            </div>
+            <div class="social__text-container"><span>Email</span></div>
         </div>
     </aside>
 
