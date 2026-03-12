@@ -27,16 +27,19 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
     
-    <!-- Fonts -->
+    <!-- Fonts (subset to used weights only) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=Geist+Mono:wght@400&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     
     <title>Abdul Rahman Shaikh | AI/ML Engineer & Researcher</title>
     
-    <!-- Dependencies (load BEFORE custom CSS) -->
+    <!-- Tailwind (must load before custom CSS) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Lucide Icons (pinned version, deferred) -->
+    <script src="https://unpkg.com/lucide@0.383.0" defer></script>
 
     <!-- Custom Styles (AFTER Tailwind so theme overrides win cascade) -->
     <link rel="stylesheet" href="css/portfolio.css">
@@ -72,10 +75,33 @@
 <body>
     <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');</script>
 
-    <!-- Animated Background -->
-    <div data-us-project="0WrRbFIPaKoWVkiQWBG0" class="absolute w-full h-full left-0 top-0 -z-10"></div>
-    <script type="text/javascript">
-      !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+    <!-- Animated Background (lazy: loads only when hero visible, pauses when scrolled past) -->
+    <div id="unicorn-bg" data-us-project="0WrRbFIPaKoWVkiQWBG0" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+    <script>
+    (function() {
+        var loaded = false;
+        var el = document.getElementById('unicorn-bg');
+        if (!el) return;
+        var obs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !loaded) {
+                    loaded = true;
+                    var s = document.createElement('script');
+                    s.src = 'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js';
+                    s.onload = function() {
+                        if (window.UnicornStudio && !window.UnicornStudio.isInitialized) {
+                            UnicornStudio.init();
+                            window.UnicornStudio.isInitialized = true;
+                        }
+                    };
+                    document.head.appendChild(s);
+                }
+                // Pause/resume: hide element when not visible to stop WebGL rendering
+                el.style.display = entry.isIntersecting ? '' : 'none';
+            });
+        }, { rootMargin: '200px' });
+        obs.observe(el);
+    })();
     </script>
 
     <!-- ============================================
@@ -198,7 +224,7 @@
                 <div class="photo-card">
                     <div class="photo-card__glow"></div>
                     <div class="photo-card__image-wrapper">
-                        <img src="assets/images/profile.png" alt="Abdul Rahman Shaikh, AI/ML Engineer and Researcher" class="photo-card__image">
+                        <img src="assets/images/profile.png" alt="Abdul Rahman Shaikh, AI/ML Engineer and Researcher" class="photo-card__image" fetchpriority="high" decoding="async">
                         <div class="photo-card__blend-top"></div>
                         <div class="photo-card__blend-left"></div>
                         <div class="photo-card__blend-right"></div>
@@ -950,9 +976,9 @@
                     <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 md:divide-x md:divide-white/10">
                         <div>
                             <p class="text-sm text-white/50">Email</p>
-                            <a href="mailto:iamsabdurahman@gmail.com" class="mt-2 inline-flex items-center gap-2 text-base sm:text-2xl font-medium tracking-tight whitespace-nowrap">
+                            <a href="/cdn-cgi/l/email-protection#caa3aba7b9aba8aebfb8aba2a7aba48aada7aba3a6e4a9a5a7" class="mt-2 inline-flex items-center gap-2 text-base sm:text-2xl font-medium tracking-tight whitespace-nowrap">
                                 <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0"></i>
-                                <span class="__cf_email__" data-cfemail="iamsabdurahman@gmail.com">iamsabdurahman@gmail.com</span>
+                                <span><span class="__cf_email__" data-cfemail="dcb5bdb1afbdbeb8a9aebdb4b1bdb29cbbb1bdb5b0f2bfb3b1">[email&#160;protected]</span></span>
                             </a>
                         </div>
                         <div class="md:pl-8">
@@ -1016,7 +1042,7 @@
             <div class="social__text-container"><span>Scholar</span></div>
         </div>
         <div class="social__link-wrapper">
-            <a href="mailto:iamsabdurahman@gmail.com" class="social__link" aria-label="Send Email">
+            <a href="/cdn-cgi/l/email-protection#dcb5bdb1afbdbeb8a9aebdb4b1bdb29cbbb1bdb5b0f2bfb3b1" class="social__link" aria-label="Send Email">
                 <svg class="social__icon social__icon--stroke" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="2" y="4" width="20" height="16" rx="2"/>
                     <path d="M22 6l-10 7L2 6"/>

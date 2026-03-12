@@ -4,9 +4,16 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide icons
-    if (window.lucide && typeof lucide.createIcons === 'function') {
-        lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+    // Initialize Lucide icons (may load after DOMContentLoaded due to defer)
+    function initIcons() {
+        if (window.lucide && typeof lucide.createIcons === 'function') {
+            lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+        }
+    }
+    initIcons();
+    // Retry once after a short delay in case deferred script hasn't loaded yet
+    if (!window.lucide) {
+        window.addEventListener('load', initIcons);
     }
 
     // --- MOBILE MENU ---
