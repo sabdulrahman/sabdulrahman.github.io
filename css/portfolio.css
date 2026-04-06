@@ -1277,8 +1277,8 @@ html[data-theme="light"] .contact-card .contact-social-icon:hover {
 html[data-theme="light"] { background-color: #f8f7f4; color: #1a1a1a; }
 html[data-theme="light"] body { background-color: #f8f7f4; color: #1a1a1a; }
 
-/* Animated bg — fade nearly invisible */
-html[data-theme="light"] [data-us-project] { opacity: 0.03; }
+/* Fluid canvas bg — fade in light mode */
+html[data-theme="light"] #fluid-bg { opacity: 0.6; }
 
 /* Light mode background: dot grid + warm gradient blobs */
 html[data-theme="light"] body::before {
